@@ -3,10 +3,16 @@
 A React command bridge for the Rust civilization simulator from
 [`Mk.04-CivilizationSimulator-TUI`](https://github.com/667700996-Games/Mk.04-CivilizationSimulator-TUI).
 
-The 27 original simulation systems run in the browser as WebAssembly. React is
+All 26 original system modules plus the world, grid, resources, observer, event,
+technology, nation, and bloc cores run in the browser as WebAssembly. React is
 responsible only for rendering, controls, filtering, charts, and the interactive
 hex map, so the economy, climate, warfare, diplomacy, technology, demography,
 cosmic timeline, and victory behavior remain driven by the Rust model.
+
+The GUI preserves the TUI command deck, three map overlays, hex selection and
+nation focus, SIGINT filters and leaderboard, science/space victory telemetry,
+war theater, hall of fame, civilization matrix, evolutionary charts, pulseboard,
+and entity roster.
 
 ## Run locally
 
@@ -30,10 +36,11 @@ Open `http://localhost:3000`.
 - `G`: toggle the pinned-nation event filter
 - `C`: pin the selected nation
 - `V`: toggle map focus mode
-- `R`: reset the world
+- `R`: restore Standard pace and timescale without replacing the world
 
 Every control is also available as an on-screen button. The map supports mouse,
-touch, and keyboard selection.
+touch, and keyboard selection. Use `NEW WORLD` when a fresh simulation is
+required.
 
 ## Rebuild the Rust engine
 
@@ -49,8 +56,11 @@ npm run engine:build
 ## Verify
 
 ```bash
+npm run lint
 npm test
 ```
 
 This builds the site, checks server-rendered metadata and product content, then
-runs the compiled Rust engine and verifies a live world snapshot.
+runs the compiled Rust engine and verifies ticking, timescale changes, reset,
+all five civilizations, the complete system module set, and a live world
+snapshot.
