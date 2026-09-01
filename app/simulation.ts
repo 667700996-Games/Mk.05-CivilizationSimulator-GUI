@@ -163,10 +163,10 @@ export function useSimulation() {
     async function start() {
       try {
         const engineUrl = "/wasm/civilization_simulator_engine.js";
-        const module = await import(/* @vite-ignore */ engineUrl) as unknown as EngineModule;
-        await module.default();
+        const engineModule = await import(/* @vite-ignore */ engineUrl) as unknown as EngineModule;
+        await engineModule.default();
         if (cancelled) return;
-        ownedEngine = new module.SimulationEngine(24);
+        ownedEngine = new engineModule.SimulationEngine(24);
         engineRef.current = ownedEngine;
         readSnapshot();
       } catch (reason) {
@@ -181,6 +181,8 @@ export function useSimulation() {
     };
   }, [readSnapshot]);
 
+  const engineReady = snapshot !== null;
+
   useEffect(() => {
     if (!running || !engineRef.current) return;
     const timer = window.setInterval(() => {
@@ -188,7 +190,7 @@ export function useSimulation() {
       readSnapshot();
     }, tickMs);
     return () => window.clearInterval(timer);
-  }, [readSnapshot, running, tickMs, snapshot === null]);
+  }, [engineReady, readSnapshot, running, tickMs]);
 
   const applyPreset = useCallback((key: string) => {
     const preset = SPEED_PRESETS.find((candidate) => candidate.key === key);

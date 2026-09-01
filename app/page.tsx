@@ -15,6 +15,7 @@ import {
 } from "./simulation";
 
 type LogFilter = "All" | "War" | "Trade/Social" | "Science/Space" | "Diplomacy";
+type EventCategory = "War" | "Trade" | "Social" | "MacroShock" | "Science" | "Space" | "Era";
 
 const NATION_ORDER: Nation[] = ["Tera", "Sora", "Aqua", "Solar", "Luna"];
 const NATION_INFO: Record<Nation, { code: string; color: string }> = {
@@ -36,17 +37,16 @@ export default function Home() {
   const [focusMode, setFocusMode] = useState(false);
   const snapshot = simulation.snapshot;
 
-  useEffect(() => {
-    if (!selected && snapshot?.grid.hexes.length) {
-      const center = snapshot.grid.hexes.find((hex) => hex.q === 0 && hex.r === 0) ?? snapshot.grid.hexes[0];
-      setSelected({ q: center.q, r: center.r });
-    }
+  const activeSelected = useMemo(() => {
+    if (selected || !snapshot?.grid.hexes.length) return selected;
+    const center = snapshot.grid.hexes.find((hex) => hex.q === 0 && hex.r === 0) ?? snapshot.grid.hexes[0];
+    return { q: center.q, r: center.r };
   }, [selected, snapshot]);
 
   const selectedOwner = useMemo(() => {
-    if (!snapshot || !selected) return null;
-    return snapshot.grid.hexes.find((hex) => coordKey(hex) === coordKey(selected))?.owner ?? null;
-  }, [selected, snapshot]);
+    if (!snapshot || !activeSelected) return null;
+    return snapshot.grid.hexes.find((hex) => coordKey(hex) === coordKey(activeSelected))?.owner ?? null;
+  }, [activeSelected, snapshot]);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -99,8 +99,8 @@ export default function Home() {
 
   const focusNation = focusMode ? (pinnedNation ?? selectedOwner) : null;
   const narrative = snapshot.events.slice(-3).reverse().map(eventHeadline).join(" · ") || "Systems nominal";
-  const selectedIsCombat = selected ? snapshot.combat_hexes.some((coord) => coordKey(coord) === coordKey(selected)) : false;
-  const selectedIsNuclear = selected ? snapshot.nuclear_hexes.some((coord) => coordKey(coord) === coordKey(selected)) : false;
+  const selectedIsCombat = activeSelected ? snapshot.combat_hexes.some((coord) => coordKey(coord) === coordKey(activeSelected)) : false;
+  const selectedIsNuclear = activeSelected ? snapshot.nuclear_hexes.some((coord) => coordKey(coord) === coordKey(activeSelected)) : false;
 
   return (
     <main className="command-shell">
@@ -121,6 +121,7 @@ export default function Home() {
       </header>
 
       <div className="narrative-ticker"><span>{snapshot.season_effect.label}</span><p>{narrative}</p><b>TICK {snapshot.tick}</b></div>
+      <DiagnosticStrip snapshot={snapshot} logFilter={logFilter} pinnedNation={pinnedNation} />
 
       <section className="control-deck live-deck" aria-label="Simulation controls">
         <button className="play-button" onClick={() => simulation.setRunning((current) => !current)} aria-label={simulation.running ? "Pause simulation" : "Resume simulation"}>
@@ -153,7 +154,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hex-map live-map">
-            <WorldMap snapshot={snapshot} overlay={overlay} selected={selected} focus={focusNation} onSelect={setSelected} />
+            <WorldMap snapshot={snapshot} overlay={overlay} selected={activeSelected} focus={focusNation} onSelect={setSelected} />
             <div className="map-scanline" />
             <div className="map-legend">
               {NATION_ORDER.map((nation) => <span key={nation}><i style={{ background: NATION_INFO[nation].color }} />{nation}</span>)}
@@ -161,7 +162,7 @@ export default function Home() {
             </div>
           </div>
           <div className="selection-strip">
-            <div><small>SELECTED HEX</small><strong>{selected ? `q: ${signed(selected.q)} · r: ${signed(selected.r)}` : "None"}</strong></div>
+            <div><small>SELECTED HEX</small><strong>{activeSelected ? `q: ${signed(activeSelected.q)} · r: ${signed(activeSelected.r)}` : "None"}</strong></div>
             <div><small>SOVEREIGNTY</small><strong style={{ color: selectedOwner ? NATION_INFO[selectedOwner].color : undefined }}>{selectedOwner ?? "Unclaimed"}</strong></div>
             <div><small>FRONT STATUS</small><strong className={selectedIsCombat ? "alert" : "safe"}>{selectedIsCombat ? "ACTIVE" : "SECURE"}</strong></div>
             <div><small>NUCLEAR TRACE</small><strong className={selectedIsNuclear ? "alert" : "safe"}>{selectedIsNuclear ? "DETECTED" : "CLEAR"}</strong></div>
@@ -180,6 +181,7 @@ export default function Home() {
               <button onClick={() => setPinnedNation(selectedOwner)}>PIN {selectedOwner ?? "SELECTION"}</button>
               {pinnedNation && <button onClick={() => setPinnedNation(null)}>CLEAR {pinnedNation}</button>}
             </div>
+            <EventLeaderboard snapshot={snapshot} />
             <div className="events live-events">
               {filteredEvents.length ? filteredEvents.map((event, index) => <EventRow key={`${event.tick}-${index}-${event.kind.type}`} event={event} pinned={pinnedNation ? eventInvolves(event, pinnedNation) : false} />) : <p className="empty-state">No events match this signal filter.</p>}
             </div>
@@ -205,6 +207,8 @@ export default function Home() {
         <EntityPanel snapshot={snapshot} />
       </section>
 
+      <SensorPanel snapshot={snapshot} />
+
       <footer className="system-footer">
         <span>RUST/WASM ENGINE</span><p>{snapshot.grid.hexes.length} hexes · {snapshot.entities.length} agents · {snapshot.events.length} recorded events · {snapshot.diplomacy.alliances.length} alliances · {snapshot.diplomacy.sanctions.length} sanctions</p><button onClick={simulation.reset}>NEW WORLD</button>
       </footer>
@@ -223,6 +227,19 @@ function WorldPulse({ snapshot }: { snapshot: SimulationSnapshot }) {
     </div>
     <div className="pulse-footer"><span>GEOLOGY</span><strong>{snapshot.geologic_stage}</strong><span>EXTINCTIONS</span><strong>{snapshot.extinction_events}</strong></div>
   </section>;
+}
+
+function DiagnosticStrip({ snapshot, logFilter, pinnedNation }: { snapshot: SimulationSnapshot; logFilter: LogFilter; pinnedNation: Nation | null }) {
+  const warTrend = latestDelta(snapshot.overlay.war_fatigue_history);
+  const carbonTrend = latestDelta(snapshot.overlay.carbon_history);
+  const popTrend = latestDelta(snapshot.science_victory.population_history);
+  return <div className="diagnostic-strip" aria-label="Simulation diagnostics">
+    <span>LOG <b>{logFilter}</b></span>
+    <span>PIN <b>{pinnedNation ?? "None"}</b></span>
+    <span className={warTrend > 0 ? "danger" : "safe"}>WAR Δ <b>{signedDecimal(warTrend, 2)}</b></span>
+    <span>CO₂ Δ <b>{signedDecimal(carbonTrend, 1)}</b></span>
+    <span className={popTrend < 0 ? "danger" : "safe"}>POP Δ <b>{signedInteger(popTrend)}</b></span>
+  </div>;
 }
 
 function ProgressPanel({ snapshot }: { snapshot: SimulationSnapshot }) {
@@ -250,13 +267,23 @@ function DiagnosticPanel({ snapshot }: { snapshot: SimulationSnapshot }) {
 }
 
 function GloryPanel({ snapshot }: { snapshot: SimulationSnapshot }) {
-  const scores = NATION_ORDER.map((nation) => {
-    const metrics = snapshot.all_metrics[nation];
-    return { nation, score: metrics.economy + metrics.science + metrics.culture + metrics.diplomacy + metrics.military + metrics.territory };
-  }).sort((a, b) => b.score - a.score);
+  const population = NATION_ORDER.slice().sort((a, b) => snapshot.all_metrics[b].population - snapshot.all_metrics[a].population)[0];
+  const economy = NATION_ORDER.slice().sort((a, b) => snapshot.all_metrics[b].economy - snapshot.all_metrics[a].economy)[0];
+  const warWins = new Map<Nation, number>();
+  snapshot.events.slice(-200).forEach((event) => {
+    if (event.kind.type !== "warfare" || !isNation(event.kind.winner)) return;
+    warWins.set(event.kind.winner, (warWins.get(event.kind.winner) ?? 0) + 1);
+  });
+  const warChampion = NATION_ORDER.slice().sort((a, b) => (warWins.get(b) ?? 0) - (warWins.get(a) ?? 0))[0];
+  const cards = [
+    { label: "Population Peak", nation: population, value: formatCompact(snapshot.all_metrics[population].population) },
+    { label: "Economic Hegemon", nation: economy, value: snapshot.all_metrics[economy].economy.toFixed(1) },
+    { label: "Science Leader", nation: snapshot.science_victory.leader, value: `${snapshot.science_victory.leader_progress.toFixed(1)}% Moon` },
+    { label: "War Win Rate", nation: (warWins.get(warChampion) ?? 0) > 0 ? warChampion : null, value: (warWins.get(warChampion) ?? 0) > 0 ? `${warWins.get(warChampion)} Wins` : "Peace" },
+  ];
   return <section className="panel glory-panel">
-    <div className="mini-heading"><div><span className="section-index">06</span><h2>Glory Leaderboard</h2></div><span className="live-label">POWER INDEX</span></div>
-    <div className="glory-list">{scores.map((entry, index) => <div key={entry.nation}><b>{String(index + 1).padStart(2, "0")}</b><span style={{ color: NATION_INFO[entry.nation].color }}>{entry.nation}</span><Progress value={entry.score} max={scores[0].score} /><strong>{entry.score.toFixed(0)}</strong></div>)}</div>
+    <div className="mini-heading"><div><span className="section-index">06</span><h2>Hall of Fame</h2></div><span className="live-label">WORLD RECORDS</span></div>
+    <div className="fame-grid">{cards.map((card) => <div key={card.label}><small>{card.label}</small><strong style={{ color: card.nation ? NATION_INFO[card.nation].color : undefined }}>{card.nation ?? "TBD"}</strong><span>{card.value}</span></div>)}</div>
   </section>;
 }
 
@@ -270,23 +297,29 @@ function NationCard({ nation, metrics, civ, snapshot, selected, pinned, onPin }:
       <span>{info.code}</span><div><h3>{nation} {pinned ? "· PIN" : ""}</h3><p>{eraLabel(metrics.era)} · {civ.cities} cities</p></div><b>{formatCompact(metrics.population)}</b>
     </button>
     {metrics.is_destroyed ? <p className="destroyed-label">CIVILIZATION DESTROYED</p> : <>
-      <Stat label="Economy" value={metrics.economy} /><Stat label="Science" value={metrics.science} /><Stat label="Culture" value={metrics.culture} /><Stat label="Military" value={metrics.military} /><Stat label="Territory" value={metrics.territory} />
-      <div className="nation-foot"><span>Happy {civ.happiness.toFixed(0)}</span><span>Trust {trust.toFixed(0)}</span><span>Fear {fear.toFixed(0)}</span><span>Ideo {ideology.toFixed(0)}</span></div>
+      <div className="nation-doctrine"><span>{humanize(metrics.weapon_tier)}</span><span>Production {civ.production.toFixed(0)}</span></div>
+      <Stat label="Economy" value={metrics.economy} /><Stat label="Science" value={metrics.science} /><Stat label="Culture" value={metrics.culture} /><Stat label="Diplomacy" value={metrics.diplomacy} /><Stat label="Religion" value={metrics.religion} /><Stat label="Military" value={metrics.military} /><Stat label="Territory" value={metrics.territory} />
+      <div className="nation-foot"><span>Happy {civ.happiness.toFixed(0)}</span><span>Stable {civ.stability.toFixed(0)}</span><span>Trust {trust.toFixed(0)}</span><span>Fear {fear.toFixed(0)}</span><span>Ideo {ideology.toFixed(0)}</span><span>Jobs {(100 - metrics.unemployment).toFixed(0)}%</span></div>
       <p className="tech-line">{metrics.unlocked_techs.map(humanize).join(" · ") || "No technologies"}</p>
     </>}
   </article>;
 }
 
 function ChartPanel({ snapshot }: { snapshot: SimulationSnapshot }) {
+  const eventDensity = buildEventDensitySeries(snapshot.events, snapshot.tick, 42);
+  const sentiment = buildSentimentSeries(snapshot.events, snapshot.tick, 42);
   return <section className="panel charts-panel">
     <div className="mini-heading"><div><span className="section-index">08</span><h2>Evolutionary Markets</h2></div><span className="live-label">120-TICK WINDOW</span></div>
     <div className="chart-grid">
       <Chart title="Moonshot Momentum" value={`${snapshot.science_victory.leader_progress.toFixed(1)}%`} values={snapshot.science_victory.history} />
+      <Chart title="Carbon ppm" value={snapshot.science_victory.carbon_ppm.toFixed(0)} values={snapshot.overlay.carbon_history} danger />
+      <Chart title="Biodiversity" value={snapshot.science_victory.biodiversity.toFixed(1)} values={snapshot.overlay.biodiversity_history} />
       <Chart title="Climate Risk" value={`${snapshot.science_victory.climate_risk.toFixed(1)}%`} values={snapshot.overlay.climate_risk_history} danger />
       <Chart title="War Fatigue" value={snapshot.overlay.war_fatigue.toFixed(1)} values={snapshot.overlay.war_fatigue_history} danger />
       <Chart title="World Richness" value={`${(snapshot.overlay.resource_richness * 100).toFixed(0)}%`} values={snapshot.overlay.richness_history.map((value) => value * 100)} />
-      <Chart title="Population" value={formatCompact(snapshot.science_victory.total_population)} values={snapshot.science_victory.population_history} />
-      <Chart title="Carbon ppm" value={snapshot.science_victory.carbon_ppm.toFixed(0)} values={snapshot.overlay.carbon_history} danger />
+      <Chart title="Event Density" value={`${snapshot.events.length} events`} values={eventDensity} />
+      <Chart title="Pulse / Sentiment" value={sentimentLabel(sentiment)} values={sentiment} />
+      <Chart title="Civilization Pop" value={formatCompact(snapshot.science_victory.total_population)} values={snapshot.science_victory.population_history} />
     </div>
   </section>;
 }
@@ -296,6 +329,39 @@ function EntityPanel({ snapshot }: { snapshot: SimulationSnapshot }) {
     <div className="mini-heading"><div><span className="section-index">09</span><h2>Field Entities</h2></div><span className="live-label">{snapshot.entities.length} ACTIVE</span></div>
     <div className="entity-table"><div className="entity-head"><span>AGENT</span><span>FACTION</span><span>BIOME</span><span>BEHAVIOR</span><span>WEALTH</span><span>FAME</span></div>{snapshot.entities.map((entity) => <div key={entity.id}><strong>{entity.name}</strong><span>{entity.faction_label}</span><span>{entity.biome_label}</span><span>{entity.behavior_label}</span><b>{entity.wealth.toFixed(0)}</b><b>{entity.fame.toFixed(0)}</b></div>)}</div>
   </section>;
+}
+
+function SensorPanel({ snapshot }: { snapshot: SimulationSnapshot }) {
+  return <section className="panel sensor-panel">
+    <div className="mini-heading"><div><span className="section-index">10</span><h2>Sensor Grid / Pulseboard</h2></div><span className="live-label">FIVE-NATION COMPARISON</span></div>
+    <div className="sensor-columns">
+      <NationMetricBars title="Economy" snapshot={snapshot} metric="economy" />
+      <NationMetricBars title="Military" snapshot={snapshot} metric="military" danger />
+      <NationMetricBars title="Science" snapshot={snapshot} metric="science" />
+    </div>
+  </section>;
+}
+
+function NationMetricBars({ title, snapshot, metric, danger = false }: { title: string; snapshot: SimulationSnapshot; metric: "economy" | "military" | "science"; danger?: boolean }) {
+  const entries = NATION_ORDER.map((nation) => ({ nation, value: snapshot.all_metrics[nation][metric] })).sort((a, b) => b.value - a.value);
+  const max = Math.max(1, ...entries.map((entry) => entry.value));
+  return <div className={danger ? "sensor-lane danger" : "sensor-lane"}><h3>{title}</h3>{entries.map((entry) => <div key={entry.nation}><span style={{ color: NATION_INFO[entry.nation].color }}>{NATION_INFO[entry.nation].code}</span><i><b style={{ width: `${Math.max(2, entry.value / max * 100)}%`, background: NATION_INFO[entry.nation].color }} /></i><strong>{entry.value.toFixed(0)}</strong></div>)}</div>;
+}
+
+function EventLeaderboard({ snapshot }: { snapshot: SimulationSnapshot }) {
+  const categories: EventCategory[] = ["War", "Trade", "Social", "MacroShock", "Science", "Space", "Era"];
+  const analytics = categories.map((category) => {
+    const matches = snapshot.events.slice(-120).filter((event) => eventCategory(event) === category);
+    const recent = snapshot.events.slice(-20).filter((event) => eventCategory(event) === category).length;
+    const sentiment = matches.reduce((score, event) => score + eventSentiment(event), 0);
+    const casualties = matches.reduce((total, event) => total + eventCasualties(event), 0);
+    return { category, count: matches.length, recent, sentiment, casualties };
+  });
+  const total = Math.max(1, analytics.reduce((sum, entry) => sum + entry.count, 0));
+  return <div className="event-leaderboard" aria-label="Event leaderboard">
+    <div className="event-leader-head"><span>TYPE</span><span>COUNT</span><span>RECENT20</span><span>SENT.</span><span>CASUALTIES</span><span>SHARE</span></div>
+    {analytics.map((entry) => <div key={entry.category}><strong>{entry.category}</strong><span>{entry.count}</span><span>{entry.recent}</span><span className={entry.sentiment < 0 ? "danger" : "safe"}>{entry.sentiment}</span><span>{formatCompact(entry.casualties)}</span><span>{(entry.count / total * 100).toFixed(1)}%</span></div>)}
+  </div>;
 }
 
 function EventRow({ event, pinned }: { event: WorldEvent; pinned: boolean }) {
@@ -329,9 +395,47 @@ function Stat({ label, value }: { label: string; value: number }) {
   return <div className="stat"><span>{label}</span><div><i style={{ width: `${Math.min(100, Math.max(0, value))}%` }} /></div><strong>{value.toFixed(0)}</strong></div>;
 }
 
-function eventCategory(event: WorldEvent) {
-  const categories: Record<WorldEvent["kind"]["type"], string> = { trade: "Trade", social: "Social", macro_shock: "Shock", warfare: "War", era_shift: "Era", science_progress: "Science", science_victory: "Science", interstellar_progress: "Space", interstellar_victory: "Space" };
+function eventCategory(event: WorldEvent): EventCategory {
+  const categories: Record<WorldEvent["kind"]["type"], EventCategory> = { trade: "Trade", social: "Social", macro_shock: "MacroShock", warfare: "War", era_shift: "Era", science_progress: "Science", science_victory: "Science", interstellar_progress: "Space", interstellar_victory: "Space" };
   return categories[event.kind.type];
+}
+
+function eventSentiment(event: WorldEvent) {
+  if (event.kind.type === "macro_shock" || event.kind.type === "warfare") return -2;
+  return 1;
+}
+
+function eventCasualties(event: WorldEvent) {
+  if (event.kind.type !== "warfare" && event.kind.type !== "macro_shock") return 0;
+  return typeof event.kind.casualties === "number" ? event.kind.casualties : 0;
+}
+
+function buildEventDensitySeries(events: WorldEvent[], lastTick: number, buckets: number) {
+  const bucketSize = Math.max(1, Math.ceil((lastTick + 1) / buckets));
+  const series = Array.from({ length: buckets }, () => 0);
+  events.forEach((event) => { series[Math.min(buckets - 1, Math.floor(event.tick / bucketSize))] += 1; });
+  if (series.every((value) => value === 0)) series[0] = 1;
+  return series;
+}
+
+function buildSentimentSeries(events: WorldEvent[], lastTick: number, buckets: number) {
+  const bucketSize = Math.max(1, Math.ceil((lastTick + 1) / buckets));
+  const raw = Array.from({ length: buckets }, () => 0);
+  events.forEach((event) => {
+    const index = Math.min(buckets - 1, Math.floor(event.tick / bucketSize));
+    const kind = event.kind.type;
+    raw[index] += kind === "macro_shock" || kind === "warfare" ? -2 : kind === "science_victory" || kind === "interstellar_victory" ? 3 : kind === "science_progress" || kind === "interstellar_progress" || kind === "era_shift" ? 2 : 1;
+  });
+  const offset = Math.max(0, -Math.min(...raw));
+  const shifted = raw.map((value) => value + offset);
+  if (shifted.every((value) => value === 0)) shifted[0] = 1;
+  return shifted;
+}
+
+function sentimentLabel(values: number[]) {
+  const recent = values.slice(-5);
+  const average = recent.reduce((sum, value) => sum + value, 0) / Math.max(1, recent.length);
+  return average > 2 ? "POSITIVE" : average < 1 ? "STRESSED" : "NEUTRAL";
 }
 
 function eventHeadline(event: WorldEvent) {
@@ -366,6 +470,11 @@ function eventInvolves(event: WorldEvent, nation: Nation) {
   const actor = kind.actor ?? kind.convener;
   return Boolean(actor && typeof actor === "object" && (actor as Record<string, unknown>).nation === nation);
 }
+
+function isNation(value: unknown): value is Nation { return typeof value === "string" && NATION_ORDER.includes(value as Nation); }
+function latestDelta(values: number[]) { return values.length > 1 ? values[values.length - 1] - values[values.length - 2] : 0; }
+function signedDecimal(value: number, digits: number) { return `${value >= 0 ? "+" : ""}${value.toFixed(digits)}`; }
+function signedInteger(value: number) { return `${value >= 0 ? "+" : ""}${Math.round(value).toLocaleString("en-US")}`; }
 
 function nextOverlay(current: MapOverlay): MapOverlay { return current === "Territory" ? "Climate" : current === "Climate" ? "Conflict" : "Territory"; }
 function previousOverlay(current: MapOverlay): MapOverlay { return current === "Territory" ? "Conflict" : current === "Climate" ? "Territory" : "Climate"; }
