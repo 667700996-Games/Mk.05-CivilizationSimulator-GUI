@@ -3,6 +3,11 @@
 A React command bridge for the Rust civilization simulator from
 [`Mk.04-CivilizationSimulator-TUI`](https://github.com/667700996-Games/Mk.04-CivilizationSimulator-TUI).
 
+Port baseline: upstream commit
+[`b18761e`](https://github.com/667700996-Games/Mk.04-CivilizationSimulator-TUI/commit/b18761e840e5e479b121ea1540fb8a2a3800e0e1).
+The simulation sources are unchanged except for JSON-friendly ordered hex
+snapshots and removal of the TUI-only `ratatui::Color` adapter.
+
 All 26 original system modules plus the world, grid, resources, observer, event,
 technology, nation, and bloc cores run in the browser as WebAssembly. React is
 responsible only for rendering, controls, filtering, charts, and the interactive
