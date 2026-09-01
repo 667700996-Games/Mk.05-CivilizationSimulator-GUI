@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Starter Project",
-  description: "A clean starting point for building your site.",
+  title: "Civilization Simulator — Command Bridge",
+  description: "Observe civilizations evolve, compete, cooperate, and reach for the stars.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
