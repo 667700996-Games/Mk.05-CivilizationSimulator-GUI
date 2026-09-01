@@ -5,7 +5,7 @@ use crate::simulation::{
     WorldEvent,
 };
 use serde::Serialize;
-use std::collections::{HashMap, HashSet};
+use std::collections::HashSet;
 
 #[derive(Debug, Clone, Serialize)]
 pub struct EntitySnapshot {
