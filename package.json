@@ -1,5 +1,5 @@
 {
-  "name": "site-creator-vinext-starter",
+  "name": "civilization-simulator-gui",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -11,13 +11,13 @@
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "engine:build": "cargo build --manifest-path engine/Cargo.toml --target wasm32-unknown-unknown --release && wasm-bindgen engine/target/wasm32-unknown-unknown/release/civilization_simulator_engine.wasm --out-dir public/wasm --target web",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",
     "react": "19.2.6",
-    "react-dom": "19.2.6",
-    "react-loading-skeleton": "3.5.0"
+    "react-dom": "19.2.6"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
