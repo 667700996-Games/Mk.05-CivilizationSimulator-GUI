@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access, readFile } from "node:fs/promises";
+import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -37,8 +37,23 @@ test("ships the full Rust source and browser artifacts", async () => {
   assert.match(page, /Signal Intelligence/);
   assert.match(page, /Science Victory/);
   assert.match(page, /Civilization Matrix/);
+  assert.match(page, /Event Leaderboard/i);
+  assert.match(page, /Event Density/);
+  assert.match(page, /Pulse \/ Sentiment/);
+  assert.match(page, /Sensor Grid \/ Pulseboard/);
+  assert.match(page, /Hall of Fame/);
   assert.match(engine, /SimulationWorld/);
   assert.ok(wasm.byteLength > 500_000, "compiled engine should contain the Rust simulation");
+  const systems = (await readdir(new URL("../engine/src/simulation/systems", import.meta.url)))
+    .filter((name) => name.endsWith(".rs") && name !== "mod.rs")
+    .sort();
+  assert.deepEqual(systems, [
+    "ai.rs", "blocs.rs", "civilization.rs", "climate.rs", "cosmic.rs", "cycles.rs",
+    "demography.rs", "diplomacy.rs", "economy.rs", "environment.rs", "events.rs",
+    "flood.rs", "ideology.rs", "logging.rs", "missions.rs", "movement.rs", "nuclear.rs",
+    "peace.rs", "richness.rs", "security.rs", "supply.rs", "technology.rs", "territory.rs",
+    "victory.rs", "warfare.rs", "warfatigue.rs",
+  ]);
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
 });
 
@@ -57,6 +72,18 @@ test("compiled Rust engine advances a complete world snapshot", async () => {
     assert.ok(snapshot.science_victory.total_population > 0);
     assert.ok(snapshot.overlay.carbon_history.length > 1);
     assert.equal(snapshot.timescale_years_per_tick, 1_000_000);
+
+    engine.set_timescale(20_000_000);
+    engine.tick(1);
+    const accelerated = JSON.parse(engine.snapshot_json());
+    assert.equal(accelerated.timescale_years_per_tick, 20_000_000);
+    assert.ok(accelerated.cosmic_age_years > snapshot.cosmic_age_years);
+
+    engine.reset();
+    const reset = JSON.parse(engine.snapshot_json());
+    assert.equal(reset.tick, 1);
+    assert.equal(reset.timescale_years_per_tick, 1_000_000);
+    assert.equal(reset.grid.radius, 24);
   } finally {
     engine.free();
   }

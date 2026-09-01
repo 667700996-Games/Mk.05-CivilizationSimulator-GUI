@@ -135,6 +135,38 @@ type EngineModule = {
   SimulationEngine: new (gridRadius: number) => Engine;
 };
 
+declare global {
+  interface Window {
+    __civilizationEngineModule?: EngineModule;
+  }
+}
+
+let engineModulePromise: Promise<EngineModule> | null = null;
+let engineInitializationPromise: Promise<unknown> | null = null;
+
+function loadEngineModule() {
+  if (window.__civilizationEngineModule) return Promise.resolve(window.__civilizationEngineModule);
+  if (engineModulePromise) return engineModulePromise;
+  engineModulePromise = new Promise<EngineModule>((resolve, reject) => {
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src = "/wasm/engine-loader.js";
+    script.dataset.civilizationEngine = "true";
+    script.onload = () => {
+      if (window.__civilizationEngineModule) resolve(window.__civilizationEngineModule);
+      else reject(new Error("The Rust engine loader finished without registering its module."));
+    };
+    script.onerror = () => reject(new Error("The Rust engine module could not be downloaded."));
+    document.head.appendChild(script);
+  });
+  return engineModulePromise;
+}
+
+function initializeEngineModule(engineModule: EngineModule) {
+  engineInitializationPromise ??= engineModule.default();
+  return engineInitializationPromise;
+}
+
 export const SPEED_PRESETS = [
   { key: "1", label: "Chronicle", intent: "Leisurely observe", tickMs: 1600, yearsPerTick: 250_000 },
   { key: "2", label: "Standard", intent: "Balanced flow", tickMs: 1000, yearsPerTick: 1_000_000 },
@@ -162,9 +194,8 @@ export function useSimulation() {
     let ownedEngine: Engine | null = null;
     async function start() {
       try {
-        const engineUrl = "/wasm/civilization_simulator_engine.js";
-        const engineModule = await import(/* @vite-ignore */ engineUrl) as unknown as EngineModule;
-        await engineModule.default();
+        const engineModule = await loadEngineModule();
+        await initializeEngineModule(engineModule);
         if (cancelled) return;
         ownedEngine = new engineModule.SimulationEngine(24);
         engineRef.current = ownedEngine;
@@ -218,6 +249,15 @@ export function useSimulation() {
   }, []);
 
   const reset = useCallback(() => {
+    engineRef.current?.set_timescale(1_000_000);
+    setPresetKey("2");
+    setTickMs(1000);
+    setYearsPerTick(1_000_000);
+    setRunning(true);
+    readSnapshot();
+  }, [readSnapshot]);
+
+  const newWorld = useCallback(() => {
     engineRef.current?.reset();
     engineRef.current?.set_timescale(1_000_000);
     setPresetKey("2");
@@ -245,6 +285,7 @@ export function useSimulation() {
     adjustPace,
     adjustTimescale,
     reset,
+    newWorld,
     step,
   };
 }

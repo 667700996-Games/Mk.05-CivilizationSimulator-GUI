@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { MapOverlay, WorldMap } from "./WorldMap";
 import {
   AxialCoord,
@@ -48,6 +48,14 @@ export default function Home() {
     return snapshot.grid.hexes.find((hex) => coordKey(hex) === coordKey(activeSelected))?.owner ?? null;
   }, [activeSelected, snapshot]);
 
+  const togglePinFilter = useCallback(() => {
+    setPinFilter((current) => {
+      const next = !current;
+      if (next) setPinnedNation(selectedOwner);
+      return next;
+    });
+  }, [selectedOwner]);
+
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.target instanceof HTMLButtonElement) return;
@@ -63,13 +71,13 @@ export default function Home() {
       else if (event.key === "[") setOverlay((current) => previousOverlay(current));
       else if (event.key === "]") setOverlay((current) => nextOverlay(current));
       else if (event.key.toLowerCase() === "f") setLogFilter((current) => LOG_FILTERS[(LOG_FILTERS.indexOf(current) + 1) % LOG_FILTERS.length]);
-      else if (event.key.toLowerCase() === "g") setPinFilter((current) => !current);
+      else if (event.key.toLowerCase() === "g") togglePinFilter();
       else if (event.key.toLowerCase() === "c") setPinnedNation(selectedOwner ?? pinnedNation);
       else if (event.key.toLowerCase() === "v") setFocusMode((current) => !current);
     }
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [pinnedNation, selectedOwner, simulation]);
+  }, [pinnedNation, selectedOwner, simulation, togglePinFilter]);
 
   const filteredEvents = useMemo(() => {
     if (!snapshot) return [];
@@ -120,7 +128,10 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="narrative-ticker"><span>{snapshot.season_effect.label}</span><p>{narrative}</p><b>TICK {snapshot.tick}</b></div>
+      <div className="narrative-ticker">
+        <span>{snapshot.season_effect.label}<i>ΔT {signedDecimal(snapshot.season_effect.temperature * 10, 1)} · Morale {signedDecimal(snapshot.season_effect.morale_shift, 1)}% · Yield {signedDecimal(snapshot.season_effect.yield_shift, 1)}% · Risk {signedDecimal(snapshot.season_effect.risk_shift, 1)}%</i></span>
+        <p>{narrative}</p><b>TICK {snapshot.tick}</b>
+      </div>
       <DiagnosticStrip snapshot={snapshot} logFilter={logFilter} pinnedNation={pinnedNation} />
 
       <section className="control-deck live-deck" aria-label="Simulation controls">
@@ -159,6 +170,7 @@ export default function Home() {
             <div className="map-legend">
               {NATION_ORDER.map((nation) => <span key={nation}><i style={{ background: NATION_INFO[nation].color }} />{nation}</span>)}
               <span className="legend-alert">✸ FRONT · ◎ NUKE</span>
+              <span>≈ SEA {(snapshot.overlay.sea_level * 100).toFixed(0)}% · ░ ICE {(snapshot.overlay.ice_line * 100).toFixed(0)}%</span>
             </div>
           </div>
           <div className="selection-strip">
@@ -177,7 +189,7 @@ export default function Home() {
               {LOG_FILTERS.map((filter) => <button key={filter} className={logFilter === filter ? "active" : ""} onClick={() => setLogFilter(filter)}>{filter}</button>)}
             </div>
             <div className="pin-row">
-              <button className={pinFilter ? "active" : ""} onClick={() => setPinFilter(!pinFilter)}>PIN FILTER {pinFilter ? "ON" : "OFF"}</button>
+              <button className={pinFilter ? "active" : ""} onClick={togglePinFilter}>PIN FILTER {pinFilter ? "ON" : "OFF"}</button>
               <button onClick={() => setPinnedNation(selectedOwner)}>PIN {selectedOwner ?? "SELECTION"}</button>
               {pinnedNation && <button onClick={() => setPinnedNation(null)}>CLEAR {pinnedNation}</button>}
             </div>
@@ -210,7 +222,7 @@ export default function Home() {
       <SensorPanel snapshot={snapshot} />
 
       <footer className="system-footer">
-        <span>RUST/WASM ENGINE</span><p>{snapshot.grid.hexes.length} hexes · {snapshot.entities.length} agents · {snapshot.events.length} recorded events · {snapshot.diplomacy.alliances.length} alliances · {snapshot.diplomacy.sanctions.length} sanctions</p><button onClick={simulation.reset}>NEW WORLD</button>
+        <span>RUST/WASM ENGINE</span><p>{snapshot.grid.hexes.length} hexes · {snapshot.entities.length} agents · {snapshot.events.length} recorded events · {snapshot.diplomacy.alliances.length} alliances · {snapshot.diplomacy.sanctions.length} sanctions</p><button onClick={() => { simulation.newWorld(); setSelected(null); setPinnedNation(null); setPinFilter(false); setFocusMode(false); setLogFilter("All"); setOverlay("Territory"); }}>NEW WORLD</button>
       </footer>
     </main>
   );
@@ -446,13 +458,13 @@ function eventHeadline(event: WorldEvent) {
   switch (kind.type) {
     case "trade": return `${name(actor(kind.actor).name)} coordinates ${name(kind.trade_focus)} trade · ${name(kind.market_pressure)}`;
     case "social": return `${name(actor(kind.convener).name)} hosts “${name(kind.gathering_theme)}” · ${name(kind.cohesion_level)}`;
-    case "macro_shock": return `${name(kind.stressor)} · ${name(kind.catalyst)} · ${name(kind.projected_impact)}`;
-    case "warfare": return `${name(kind.winner)} defeated ${name(kind.loser)} · ${formatCompact(number(kind.casualties))} casualties${kind.nuclear ? " · NUCLEAR" : ""}`;
+    case "macro_shock": return `${name(kind.stressor)} · ${name(kind.catalyst)} · ${name(kind.projected_impact)}${number(kind.casualties) > 0 ? ` · ${formatCompact(number(kind.casualties))} casualties` : ""}`;
+    case "warfare": return `${name(kind.winner)} defeated ${name(kind.loser)} · territory +${number(kind.territory_change).toFixed(2)} · ${formatCompact(number(kind.casualties))} casualties${kind.nuclear ? " · NUCLEAR" : ""}`;
     case "era_shift": return `${name(kind.nation)} entered ${eraLabel(name(kind.era))} · ${humanize(name(kind.weapon))}`;
     case "science_progress": return `${name(kind.nation)} moon project reached ${number(kind.progress).toFixed(1)}%`;
-    case "science_victory": return `${name(kind.winner)} achieved the first moon landing`;
+    case "science_victory": return `${name(kind.winner)} achieved the first moon landing · ${number(kind.progress).toFixed(1)}%`;
     case "interstellar_progress": return `${name(kind.leader)} interstellar migration reached ${number(kind.progress).toFixed(1)}%`;
-    case "interstellar_victory": return `${name(kind.winner)} completed interstellar settlement`;
+    case "interstellar_victory": return `${name(kind.winner)} completed interstellar settlement · ${number(kind.progress).toFixed(1)}%`;
   }
 }
 
