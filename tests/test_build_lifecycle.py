@@ -28,7 +28,8 @@ def prepare(job):
     work=job/'source'; work.mkdir(); return work
 def steps(work,job):
     code="from pathlib import Path; import time,sys; Path('output').mkdir(); Path('output/value').write_text('new'); Path('output/code.map').write_text('debug'); "
-    if mode=='wait': code+="Path('ready').write_text('ready'); time.sleep(60); "
+    if mode=='ignore': code+="import signal; signal.signal(signal.SIGTERM,signal.SIG_IGN); "
+    if mode in ('wait','ignore'): code+="Path('ready').write_text('ready'); time.sleep(60); "
     if mode=='loud': code+="sys.stdout.write('x'*1500000); "
     if mode=='fail': code+="sys.exit(2); "
     return [[sys.executable,'-c',code]]
@@ -114,6 +115,13 @@ class LifecycleTests(unittest.TestCase):
         self.assertFalse(job.exists())
         self.assertEqual((self.root / 'dist/value').read_text(), 'original')
 
+    def test_uncooperative_child_is_killed_after_grace_period(self):
+        child = self.launch('ignore')
+        self.ready()
+        child.terminate()
+        self.assertNotEqual(child.wait(timeout=10), 0)
+        self.assertFalse(list((self.life.home / 'jobs').iterdir()))
+
     def test_concurrent_workspaces_are_protected(self):
         first, second = self.launch('wait'), self.launch('wait')
         jobs = self.ready(2)
@@ -158,6 +166,36 @@ class LifecycleTests(unittest.TestCase):
         self.life.sweep()
         self.assertEqual((self.root / 'dist/value').read_text(), 'original')
 
+    def test_publication_io_failure_restores_previous_output(self):
+        job = self.life.new_owned('jobs')
+        output = job / 'output'
+        output.mkdir()
+        (output / 'value').write_text('new')
+        replace = os.replace
+
+        def fail_incoming(src, dst):
+            if Path(src).name == 'incoming':
+                raise OSError('simulated publication failure')
+            return replace(src, dst)
+
+        with patch.object(module.os, 'replace', side_effect=fail_incoming):
+            with self.assertRaises(OSError):
+                self.life.publish('web', output, False, job)
+        self.assertEqual((self.root / 'dist/value').read_text(), 'original')
+
+    def test_engine_external_edits_are_preserved(self):
+        destination = self.root / 'public/wasm'
+        destination.mkdir(parents=True)
+        (destination / 'engine.wasm').write_bytes(b'authored')
+        module.write_json(self.life.home / 'engine-installed.json', {'sha256': 'different'})
+        job = self.life.new_owned('jobs')
+        output = job / 'output'
+        output.mkdir()
+        (output / 'engine.wasm').write_bytes(b'new')
+        self.life.publish('engine', output, False, job)
+        backup = next((self.life.home / 'preserved').iterdir())
+        self.assertEqual((backup / 'engine.wasm').read_bytes(), b'authored')
+
     def test_unowned_and_symlink_paths_preserved(self):
         unowned = self.life.home / 'jobs' / ('b' * 32)
         unowned.mkdir()
@@ -177,9 +215,11 @@ class LifecycleTests(unittest.TestCase):
 
     def test_cleanup_failure_warns_with_remaining_path(self):
         job = self.life.new_owned('jobs')
+        (job / 'source').mkdir()
         with patch.object(module.shutil, 'rmtree', side_effect=PermissionError('denied')):
             self.life.sweep()
         self.assertTrue(job.exists())
+        self.assertTrue(self.life.owned(job), 'failed deletion must keep ownership for recovery')
         self.assertIn(str(job), self.life.warnings[-1])
 
     def test_engine_install_does_not_accumulate_known_backups(self):

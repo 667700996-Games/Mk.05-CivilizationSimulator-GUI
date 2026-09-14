@@ -1,0 +1,12 @@
+{
+  "measured_at": "2026-09-15T08:49:13.964844+09:00",
+  "project_before_kib": 660212,
+  "project_final_kib": 650180,
+  "filesystem_free_before_bytes": 115813838848,
+  "filesystem_free_final_bytes": 116124401664,
+  "filesystem_interval_delta_bytes": 310562816,
+  "cleanup_only_free_delta_bytes": 14733312,
+  "note": "Volume-wide free space includes concurrent unrelated activity/APFS; cleanup-only interval and total-task interval are reported separately. Final project includes new validated package, previous output, automation and audit files.",
+  "jobs_remaining": 0,
+  "project_reduction_kib": 10032
+}

@@ -21,6 +21,25 @@ LIMIT = 1024 * 1024
 ID = re.compile(r'^[0-9a-f]{32}$')
 
 
+def sync_directory(path):
+    descriptor = os.open(path, os.O_RDONLY | os.O_DIRECTORY)
+    try:
+        os.fsync(descriptor)
+    finally:
+        os.close(descriptor)
+
+
+def sync_tree(path):
+    for base, _dirs, files in os.walk(path):
+        for name in files:
+            p = Path(base) / name
+            if p.is_symlink():
+                raise RuntimeError('Unexpected symlink in generated package: ' + str(p))
+            with p.open('rb') as stream:
+                os.fsync(stream.fileno())
+        sync_directory(base)
+
+
 def write_json(path, data):
     temp = path.with_name(path.name + '.new')
     with open(temp, 'w') as stream:
@@ -28,6 +47,7 @@ def write_json(path, data):
         stream.flush()
         os.fsync(stream.fileno())
     os.replace(temp, path)
+    sync_directory(path.parent)
 
 
 def read_json(path):
@@ -84,6 +104,8 @@ class Lifecycle:
                 if p.is_symlink():
                     raise RuntimeError('Refusing symlink: ' + str(p))
                 p.mkdir(exist_ok=True)
+            sync_directory(self.home)
+            sync_directory(self.root)
 
     def identity(self):
         return {'owner': OWNER, 'root': str(self.root)}
@@ -114,8 +136,17 @@ class Lifecycle:
             return
         try:
             # Only an immediate UUID child of a fixed, owned directory is eligible.
-            # shutil.rmtree does not follow nested symlinks.
-            shutil.rmtree(path)
+            # Keep the ownership marker until payload deletion finishes so a kill
+            # during a large recursive deletion remains recoverable next time.
+            for child in path.iterdir():
+                if child.name == 'owner.json':
+                    continue
+                if child.is_dir() and not child.is_symlink():
+                    shutil.rmtree(child)
+                else:
+                    child.unlink()
+            (path / 'owner.json').unlink()
+            path.rmdir()
         except OSError as error:
             self.warn(path, error)
 
@@ -123,6 +154,7 @@ class Lifecycle:
         p = self.home / parent / (name or uuid.uuid4().hex)
         p.mkdir(mode=0o700)
         write_json(p / 'owner.json', self.identity())
+        sync_directory(p.parent)
         return p
 
     def recover_publication(self):
@@ -139,8 +171,11 @@ class Lifecycle:
         # A crash between the two renames restores the previously working output.
         if not os.path.lexists(dest) and backup.exists():
             os.rename(backup, dest)
+            sync_directory(dest.parent)
+            sync_directory(backup.parent)
             print('Recovered previous output: ' + str(dest), flush=True)
         journal.unlink()
+        sync_directory(self.home)
 
     def prune(self):
         for parent, keep in (('packages', 2), ('logs', 10)):
@@ -304,6 +339,7 @@ class Lifecycle:
         with self.control():
             self.recover_publication()
             package = self.new_owned('releases' if release else 'packages')
+            sync_tree(output)
             os.rename(output, package / 'output')
             write_json(package / 'result.json', {'kind': kind, 'completed': time.time(),
                                                 'release': release})
@@ -322,8 +358,10 @@ class Lifecycle:
                 incoming.symlink_to(os.path.relpath(package / 'output', dest.parent), target_is_directory=True)
             else:
                 shutil.copytree(package / 'output', incoming)
+                sync_tree(incoming)
             if dest.is_symlink() and kind == 'web':
                 os.replace(incoming, dest)
+                sync_directory(dest.parent)
             else:
                 backup_id = uuid.uuid4().hex
                 backup = self.home / 'preserved' / backup_id
@@ -334,7 +372,10 @@ class Lifecycle:
                 try:
                     if os.path.lexists(dest):
                         os.rename(dest, backup)
+                        sync_directory(backup.parent)
+                        sync_directory(dest.parent)
                     os.replace(incoming, dest)
+                    sync_directory(dest.parent)
                 finally:
                     self.recover_publication()
                 if kind == 'engine':
@@ -366,6 +407,7 @@ class Lifecycle:
         for sig in (signal.SIGINT, signal.SIGTERM, signal.SIGHUP):
             previous[sig] = signal.signal(sig, interrupted)
         status = 'failed'
+        failure = None
         try:
             with open(logs / 'output.log', 'wb') as log:
                 work = prepare(job)
@@ -377,20 +419,34 @@ class Lifecycle:
                 if output is not None:
                     self.publish(kind, output, release, job)
                 status = 'success'
+        except BaseException as error:
+            failure = str(error)
+            raise
         finally:
             self.stop_group(signal.SIGKILL)
             for sig, handler in previous.items():
                 signal.signal(sig, handler)
-            with self.control():
-                write_json(logs / 'result.json', {'kind': kind, 'completed': time.time(),
-                                                'status': self.cancelled or status,
-                                                'log_limit_bytes': LIMIT})
-                if (logs / 'output.log').exists() and (logs / 'output.log').stat().st_size >= LIMIT:
-                    print(f'WARNING: log capped at 1 MiB: {logs / "output.log"}', file=sys.stderr)
-                self.remove(job)
+            try:
+                with self.control():
+                    try:
+                        write_json(logs / 'result.json', {'kind': kind, 'completed': time.time(),
+                                                        'status': self.cancelled or status,
+                                                        'error': failure, 'log_limit_bytes': LIMIT})
+                        if (logs / 'output.log').exists() and (logs / 'output.log').stat().st_size >= LIMIT:
+                            print(f'WARNING: log capped at 1 MiB: {logs / "output.log"}', file=sys.stderr)
+                    except OSError as error:
+                        self.warn(logs, error)
+                    self.remove(job)
+                    log_lease.close()
+                    try:
+                        self.prune()
+                    except OSError as error:
+                        self.warn(self.home, error)
+            except OSError as error:
+                self.warn(job, error)
+            finally:
                 lease.close()
                 log_lease.close()
-                self.prune()
 
 
 def build(root, kind, release=False):

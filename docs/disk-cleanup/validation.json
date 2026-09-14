@@ -1,0 +1,42 @@
+{
+  "host": "macOS arm64, Node 22.18.0, Python 3.9.6",
+  "lifecycle_tests": {
+    "command": "npm run test:cleanup",
+    "passed": 13,
+    "duration_seconds": 7.063,
+    "cases": [
+      "success and failure preserve previous output",
+      "SIGINT/SIGTERM/SIGHUP cleanup",
+      "SIGKILL parent retains active child workspace then next-run recovery",
+      "concurrent workspace protection",
+      "2 development packages / 10 logs / 1MiB cap; releases and symbols exempt",
+      "active package reader protects retained output",
+      "publication crash journal restoration",
+      "publication I/O failure rollback",
+      "unknown ownership and symlink protection",
+      "cleanup error warning with remaining path",
+      "engine known backup pruning",
+      "external engine edits preserved",
+      "uncooperative child killed after 5-second grace period"
+    ]
+  },
+  "web_build": {
+    "first_attempt": "compiled; staged SSR validation rejected cached absolute font path; original dist preserved; workspace removed",
+    "second_attempt": "compiled and all 3 staged HTML/WASM tests passed; published",
+    "published_output_tests": "node --test tests/rendered-html.test.mjs: 3 passed",
+    "production_http": "npm start lifecycle on port 4173: HTTP 200 and expected game content; SIGTERM stopped server; jobs remaining 0"
+  },
+  "other_checks": [
+    "npm run lint passed",
+    "git diff --check passed",
+    "npm run build:clean passed",
+    "173 original preservation hashes match"
+  ],
+  "not_executed": [
+    "GitHub-hosted Ubuntu workflow",
+    "full Cargo/wasm-bindgen recompilation (existing committed WASM was executed)",
+    "remote Sites/Cloudflare deployment",
+    "native Windows/mobile/console packaging (no such target configured)",
+    "physical power-loss test (publication interrupted-state recovery tested instead)"
+  ]
+}

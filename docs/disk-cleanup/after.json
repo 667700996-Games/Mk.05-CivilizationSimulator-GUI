@@ -1,0 +1,1048 @@
+{
+  "preserved_files_checked": 173,
+  "unexpected_changes": [],
+  "duplicate_deleted_allocated_bytes": 6807552,
+  "du_kib": 650116,
+  "free_bytes": 115645796352,
+  "jobs_remaining": 0,
+  "hashes": [
+    {
+      "original_path": ".DS_Store",
+      "preserved_path": ".DS_Store",
+      "sha256": "f6ce1e8fab2931e0a1e3603f12b6226e5203c56081d8084b9afeafc62f20aa3a",
+      "matches": true
+    },
+    {
+      "original_path": "LICENSE",
+      "preserved_path": "LICENSE",
+      "sha256": "ef8d9a5cab15c2add0f0339ebb95538bf685162a5077d68bf212c53ba41d824e",
+      "matches": true
+    },
+    {
+      "original_path": "postcss.config.mjs",
+      "preserved_path": "postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "matches": true
+    },
+    {
+      "original_path": "next-env.d.ts",
+      "preserved_path": "next-env.d.ts",
+      "sha256": "a291a6b60536fec0a3b9d4ffd6d51179b463e9bc20281d7499d756813b4c07d5",
+      "matches": true
+    },
+    {
+      "original_path": "package-lock.json",
+      "preserved_path": "package-lock.json",
+      "sha256": "bc813855135cc3780be98b184e8514369c9a0a90da52cc378acb6ef240823d10",
+      "matches": true
+    },
+    {
+      "original_path": "drizzle.config.ts",
+      "preserved_path": "drizzle.config.ts",
+      "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
+      "matches": true
+    },
+    {
+      "original_path": "next.config.ts",
+      "preserved_path": "next.config.ts",
+      "sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
+      "matches": true
+    },
+    {
+      "original_path": "app/chatgpt-auth.ts",
+      "preserved_path": "app/chatgpt-auth.ts",
+      "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc",
+      "matches": true
+    },
+    {
+      "original_path": "app/layout.tsx",
+      "preserved_path": "app/layout.tsx",
+      "sha256": "cf6e19e63932f1a3d6a4b383a2360cbb09cd536ec445d04b9a2f42b8dcd2f258",
+      "matches": true
+    },
+    {
+      "original_path": "app/WorldMap.tsx",
+      "preserved_path": "app/WorldMap.tsx",
+      "sha256": "f222da098d2de20572a72716f96fed31a128c61736004c0c653a74907605c3c8",
+      "matches": true
+    },
+    {
+      "original_path": "app/page.tsx",
+      "preserved_path": "app/page.tsx",
+      "sha256": "83e67ce32c515661b4d2395f6cb9311a9592778bb8af313b808189a0b610af3b",
+      "matches": true
+    },
+    {
+      "original_path": "app/globals.css",
+      "preserved_path": "app/globals.css",
+      "sha256": "6f029ece2f80d507a4eca1504977baa0ab3e62a7c1f9cd203d0f6e3cb617eb01",
+      "matches": true
+    },
+    {
+      "original_path": "app/simulation.ts",
+      "preserved_path": "app/simulation.ts",
+      "sha256": "0142067af66dc275fc3c5c9228d74d56343576ccc8df1ae079416401bcdef6f7",
+      "matches": true
+    },
+    {
+      "original_path": "dist/.DS_Store",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/.DS_Store",
+      "sha256": "d59d436192a3a790ffd1edd6f3ddcf90ee42aed6b68139188f5abccd9e51885b",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/vinext-server.json",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/vinext-server.json",
+      "sha256": "a82deeb8becf4a35e4207c7f7cb7070bed9950caa90b9fee17c1e642e2dfc26f",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/wrangler.json",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/wrangler.json",
+      "sha256": "43a37a65e8e129fbc686780025ff387ba6c80f2aaaed1a9fc03b7446e5e10b2c",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/vinext-externals.json",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/vinext-externals.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/index.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/index.js",
+      "sha256": "60aaf6da66693bb569537fea613516ce06c7753b223ad22c8200ac56bf498b68",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/BUILD_ID",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/BUILD_ID",
+      "sha256": "c6f36db3daec14c4564560a4a31b2d92a23e15c1ad343990bfd294b8f7e9f4d4",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/vinext-client-assets.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/vinext-client-assets.js",
+      "sha256": "2c740f6f36ba0e60a7bad5c5ef669dfbd7e95647e0c86cf8173b0668195f3dc1",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/__vite_rsc_assets_manifest.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/__vite_rsc_assets_manifest.js",
+      "sha256": "7d12bd7e09434d0546bfecc17e71741d7960d427d9304ae551c2a0c128878f84",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/navigation-runtime-Dnpfg5UA.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/navigation-runtime-Dnpfg5UA.js",
+      "sha256": "a4395ea2039fa828ca71be1155ff8e5a8ec334a187b351670a9051cc2c7b4a0a",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-prerender-static-params-DDhPljJM.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-prerender-static-params-DDhPljJM.js",
+      "sha256": "bfa4ad6d32bc78b658c1d6c8c505aa098a1f1c3e87b2ed9147a54251cdc219cc",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/headers-BoLcH_CX.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/headers-BoLcH_CX.js",
+      "sha256": "f2231d9b898e713ff851c7c6f351bd912924d66fa3cd1d75589fd1625ab71d19",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/page-C3zY57eX.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/page-C3zY57eX.js",
+      "sha256": "c9ad5a31aeae28a297e0fb03ae22225dc96e81461d09a7d2b5fd0e002a232d3f",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/rolldown-runtime-DUnMT5BP.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/rolldown-runtime-DUnMT5BP.js",
+      "sha256": "5db5ba82eef00d1dee7e86e663098c9427d01183a88d357437daff295aec3e75",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-page-cache-BOWjy5L4.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-page-cache-BOWjy5L4.js",
+      "sha256": "84ee1000bea5b81512f55f140caf30ea0d2a5c56bb790a4d354ab9c96524ac53",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-page-cache-finalizer-Cb5GAT0h.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-page-cache-finalizer-Cb5GAT0h.js",
+      "sha256": "8d644e01548012aed0dfa5cdac5a3d5ec8fe1aec0da06c6ca578d878be70515a",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/record-CW_Fw1mA.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/record-CW_Fw1mA.js",
+      "sha256": "b9bdb7b7d0e4844d241dba61104d18111d61ef92af3f137d15749531d276f9cf",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/root-params-CEmdAQI0.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/root-params-CEmdAQI0.js",
+      "sha256": "ed18c8c71a964178c57d644436409e819a1f0f1d57a072f670473042561425e8",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/instrumentation-BefDMiNC.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/instrumentation-BefDMiNC.js",
+      "sha256": "988246af7ebaf477099f96f6dc8d32819eca603bf3689b44b4e45534be5955d0",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-elements-BUrInmxW.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-elements-BUrInmxW.js",
+      "sha256": "1d80c881de21f9b556564f9e004483c6729ee5750c4aec3700ee8b87d92fac6e",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-route-handler-dispatch-DvLDpl25.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-route-handler-dispatch-DvLDpl25.js",
+      "sha256": "ba0bd90589f91e0192aa462747e159ee69b0b8b19ea68266a4d2b743d82d6f2c",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-static-generation-LiC_hiio.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-static-generation-LiC_hiio.js",
+      "sha256": "71451721ae4a42108e9ed32567cd9d9861beb4952215b0fd57ffc373cd3edc01",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-segment-config-D7ZLXjCq.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-segment-config-D7ZLXjCq.js",
+      "sha256": "a19fecfdd4eb0301e2944a69a5ed80a4ffa4fac038e92f538ffb582b3f6d82e1",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/framework~index~page~app-route-handler-dispatch-DbVbrU2K.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/framework~index~page~app-route-handler-dispatch-DbVbrU2K.js",
+      "sha256": "4f4b51ee65c1f133eac83e16398c1cd72039b803a894075bf3897d7894984582",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/text-stream-CwHK4Xwt.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/text-stream-CwHK4Xwt.js",
+      "sha256": "b093afad091c5f3bd17e22d789367d3ffdb88cc857df0cf9fae801173ac895c3",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/headers-B4uKd7st.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/headers-B4uKd7st.js",
+      "sha256": "5947a60b0b2aee2180fd23a0f0a443ef6ebcbcaddbe45fe2c9debb68be50f8ba",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/framework~index~layout~page~app-page-cache-render~app-page-cache~app-route-handler-dispatch-DqvEh9pS.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/framework~index~layout~page~app-page-cache-render~app-page-cache~app-route-handler-dispatch-DqvEh9pS.js",
+      "sha256": "4f686187dcd97b5d9eef7f152f93eaf0b53172f59e748a8ecf410a20b326e9f8",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/framework~index-BQ5KqATe.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/framework~index-BQ5KqATe.js",
+      "sha256": "e2792bbbdc12e35a666a1a2749096d670b6095cea6293a91acde1951b5bd43b8",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/rsc-BDjKRrrT.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/rsc-BDjKRrrT.js",
+      "sha256": "0e1b3277c357d0bde36177631f17e122e8a8d55a1bf29076b72499ee1e61d479",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-page-stream-CINmXk0k.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-page-stream-CINmXk0k.js",
+      "sha256": "662d4854c1ba4a3413331eec147060523f27b02f47ebbf497f0d39d3a3774609",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/implicit-tags-CVrDJW2G.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/implicit-tags-CVrDJW2G.js",
+      "sha256": "d391920a1bba78299b0548cfdb8133b8463584c6b4f96f9a75b49581174fd838",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-prerender-endpoints-DOJylap2.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-prerender-endpoints-DOJylap2.js",
+      "sha256": "5c0c3b39b20a5dc14e30da61db7306708cffc31b2ab24b9de6d95e6a1c44b9ce",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/app-page-cache-render-QMKzYBgp.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/app-page-cache-render-QMKzYBgp.js",
+      "sha256": "26097c7d429e29776e4f57ad10415d9ebbd110c86cc82750b3e93308655e2bc6",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/framework~index~layout~app-page-cache-render~app-page-cache~app-route-handler-dispatch-C7OfuMlj.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/framework~index~layout~app-page-cache-render~app-page-cache~app-route-handler-dispatch-C7OfuMlj.js",
+      "sha256": "a12fff93b2bf8ee3e27bc53517abcefe8325b83646bf4b7aedd7465178cbd644",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/_next/static/css/index.Z0ttivHN.css",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/_next/static/css/index.Z0ttivHN.css",
+      "sha256": "ed20a538065a3da1f7c8a1c6ff2e668d161aee4a50aef4b1cdf0c698a0e45c25",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/vinext-server.json",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/vinext-server.json",
+      "sha256": "a82deeb8becf4a35e4207c7f7cb7070bed9950caa90b9fee17c1e642e2dfc26f",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/index.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/index.js",
+      "sha256": "c70dd61807fa4625a7163aeb2b1a0c16df66014d0f8c96fbb1446391dd2216fe",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/vinext-client-assets.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/vinext-client-assets.js",
+      "sha256": "2c740f6f36ba0e60a7bad5c5ef669dfbd7e95647e0c86cf8173b0668195f3dc1",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/__vite_rsc_assets_manifest.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/__vite_rsc_assets_manifest.js",
+      "sha256": "7d12bd7e09434d0546bfecc17e71741d7960d427d9304ae551c2a0c128878f84",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/_next/static/static.edge-CKJjMt3N.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/_next/static/static.edge-CKJjMt3N.js",
+      "sha256": "9aa4706e79212b5ce4072eb3d7600afd525dc33bf2f7a66f64a94ffbc9fd7149",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/_next/static/app-router-scroll-CXtfYmbm.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/_next/static/app-router-scroll-CXtfYmbm.js",
+      "sha256": "33b9ed54d0ed62ae888ff8f1c5b6edfe80c677616e1e341fe33d647181fea7d3",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/_next/static/layout-segment-context-B4ytubBg.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/_next/static/layout-segment-context-B4ytubBg.js",
+      "sha256": "2e9e01153ce4f5bfb1d2583f0949de071a5b1a4755863e538fa3562223b55696",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/_next/static/app-prefetch-fetch-queue-DxuBK-0j.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/_next/static/app-prefetch-fetch-queue-DxuBK-0j.js",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/_next/static/page-DvQMGhGw.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/_next/static/page-DvQMGhGw.js",
+      "sha256": "41de499be4a646d569fc999d4e03b4aa097fe91824539a53dc10ec86d5619f9e",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/ssr/_next/static/error-boundary-CxInkitn.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/ssr/_next/static/error-boundary-CxInkitn.js",
+      "sha256": "23f85efd0e4fdd5a706b4f36feaccb50faf4991298f3ba5590334953d7a708f9",
+      "matches": true
+    },
+    {
+      "original_path": "dist/server/.vite/manifest.json",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/server/.vite/manifest.json",
+      "sha256": "a04fe0a14f3c62c19b1755e57db9f9f154edb211ba9f7a30ce6b4ceeeaaa6f39",
+      "matches": true
+    },
+    {
+      "original_path": "dist/.openai/hosting.json",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/.openai/hosting.json",
+      "sha256": "1198e3144174b2e68a26f591d4e1375886662a17618d1d02e6c2d9802d40b5e4",
+      "matches": true
+    },
+    {
+      "original_path": "dist/.openai/drizzle/meta/_journal.json",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/.openai/drizzle/meta/_journal.json",
+      "sha256": "90cb374e093894d0efce6f1830d873a42aadd8ba49d2f024495e5cb2e1c8c303",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/file.svg",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/file.svg",
+      "sha256": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_headers",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_headers",
+      "sha256": "2148fb62669525f5091532d36d4a48a8da95b08a5a797bacde75d2fe981351bb",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/.assetsignore",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/.assetsignore",
+      "sha256": "14ce8d5101f6d8f172242053466d44f5e2cd622dee81db53c14bd445c25d1942",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/vinext-client-entry-manifest.json",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/vinext-client-entry-manifest.json",
+      "sha256": "37576a72d0724bdb98d2f83c54969263569b94b48d13f23b798638d1529d2668",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/og.png",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/og.png",
+      "sha256": "f1d0012cc28a8b73e1d6cee49425e66bbb250ee512eee778d9098b55d10ffba7",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/globe.svg",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/globe.svg",
+      "sha256": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/window.svg",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/window.svg",
+      "sha256": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/favicon.svg",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/favicon.svg",
+      "sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/d86e3715-83b5-4ba7-80c2-6c47fbf5cb90/_ssgManifest.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/d86e3715-83b5-4ba7-80c2-6c47fbf5cb90/_ssgManifest.js",
+      "sha256": "653f3e53e89b4f8548ff86c19e92bb3c6b84b6be7485a320b1e00893ed877479",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/d86e3715-83b5-4ba7-80c2-6c47fbf5cb90/_buildManifest.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/d86e3715-83b5-4ba7-80c2-6c47fbf5cb90/_buildManifest.js",
+      "sha256": "47f02b34be6dc481257b6efce4c19e19111f37ef5c437f8ffed44f0da97fa9bb",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/css/index.Z0ttivHN.css",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/css/index.Z0ttivHN.css",
+      "sha256": "ed20a538065a3da1f7c8a1c6ff2e668d161aee4a50aef4b1cdf0c698a0e45c25",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2",
+      "sha256": "58a6b173d5ca1dec92166ea3c6cb1a84a4144556d10928ac14e8e6b40e4787bd",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2",
+      "sha256": "b7a545bbb08256bd809f11cfe66d88da3e22d169ea4407737b1ef0ec1ed3d791",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2",
+      "sha256": "6129fc8571c3e0cb0a4c41f5160c974a843b055009dc4ad8858bd808e18a2d86",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2",
+      "sha256": "f689f638f29fff460a2d5749edb5d5c38d7bef0389f32032d871f23fc6ebb008",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+      "sha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2",
+      "sha256": "75b3bedbebc35f347c0ae3b416aa871941555357e7b0f83767eb5987875589ed",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2",
+      "sha256": "745994b5cd950ec201b66526375f057d540847cccfc70f4f24f5f571d26d3923",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2",
+      "sha256": "e27f657e38d52887baa3b6b2f812bef93dfdd356f0810e40edd4ee284cc7e9f6",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2",
+      "sha256": "d67e4a94ba498635f764ddca7d1ec4271f5642f032eb24b426764480f66f8497",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2",
+      "sha256": "16e1d48b6dd29eb240aec5db36184eb182933c082cd43de7f35af686d58087d2",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/chunks/rolldown-runtime-C60lm6uB.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/chunks/rolldown-runtime-C60lm6uB.js",
+      "sha256": "5db5ba82eef00d1dee7e86e663098c9427d01183a88d357437daff295aec3e75",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/chunks/layout-segment-context-CCxzgiAe.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/chunks/layout-segment-context-CCxzgiAe.js",
+      "sha256": "b8780a610ce00719660cc6b8a45acd59bc3515394e07f8b23ca1a7067aafe0c8",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/chunks/index-CNarvMte.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/chunks/index-CNarvMte.js",
+      "sha256": "0e365964d05898dc1ed9368657eb8a9b06dda8ad9593cd639669d2f4ffcf4c73",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/chunks/page-27X-BS4l.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/chunks/page-27X-BS4l.js",
+      "sha256": "723f108b02ab06793ae311cb237190560c52f3441a7e8c7b41b79eb8517b0edb",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/_next/static/chunks/framework-BgSIrAUN.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/_next/static/chunks/framework-BgSIrAUN.js",
+      "sha256": "a8e611453a742bf422100cc5f20f7f4139295740492196303a191d9f17033206",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/wasm/civilization_simulator_engine.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/wasm/civilization_simulator_engine.js",
+      "sha256": "1d5a903485e0462761579ece5385610829fb19f0ea851e380911a9a7775ba8f0",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/wasm/civilization_simulator_engine_bg.wasm.d.ts",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/wasm/civilization_simulator_engine_bg.wasm.d.ts",
+      "sha256": "1327f453b9e993f075d85e8fcd3f20a1e7e6a6a6af44ecd276487b772d5cbec8",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/wasm/engine-loader.js",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/wasm/engine-loader.js",
+      "sha256": "5404f16d890fb7dc9b7e65551dd843c93d254f22e675913a23a9f6b78db09cbf",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/wasm/civilization_simulator_engine.d.ts",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/wasm/civilization_simulator_engine.d.ts",
+      "sha256": "02e38f6ab4e2c311b475f7290e9326fcb545ed4e3391b38b3a01145da9742eec",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/wasm/civilization_simulator_engine_bg.wasm",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/wasm/civilization_simulator_engine_bg.wasm",
+      "sha256": "d32780d9126765b0894471e986cdea871c312f99b2a062be154f1a1944bbc818",
+      "matches": true
+    },
+    {
+      "original_path": "dist/client/.vite/manifest.json",
+      "preserved_path": ".build/preserved/6c47bc5bffee44a4b4eb507a49f3b1e8/client/.vite/manifest.json",
+      "sha256": "6b06ae5483ffe6825d1db1e487139d1912a2bc4bc03f619ba9fda263d58cb2cc",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/.DS_Store",
+      "preserved_path": ".vinext/.DS_Store",
+      "sha256": "ddeb9c5aabd6b0a79d1c10a9a94a07dd5f2f6a17782de1eac85045c1193a4b13",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-8ac0455e797f/geist-001175b1.woff2",
+      "preserved_path": ".vinext/fonts/geist-8ac0455e797f/geist-001175b1.woff2",
+      "sha256": "58a6b173d5ca1dec92166ea3c6cb1a84a4144556d10928ac14e8e6b40e4787bd",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-8ac0455e797f/geist-ff2310f5.woff2",
+      "preserved_path": ".vinext/fonts/geist-8ac0455e797f/geist-ff2310f5.woff2",
+      "sha256": "b7a545bbb08256bd809f11cfe66d88da3e22d169ea4407737b1ef0ec1ed3d791",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-8ac0455e797f/geist-875ccdd4.woff2",
+      "preserved_path": ".vinext/fonts/geist-8ac0455e797f/geist-875ccdd4.woff2",
+      "sha256": "6129fc8571c3e0cb0a4c41f5160c974a843b055009dc4ad8858bd808e18a2d86",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-8ac0455e797f/geist-52306abf.woff2",
+      "preserved_path": ".vinext/fonts/geist-8ac0455e797f/geist-52306abf.woff2",
+      "sha256": "f689f638f29fff460a2d5749edb5d5c38d7bef0389f32032d871f23fc6ebb008",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+      "preserved_path": ".vinext/fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+      "sha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-8ac0455e797f/style.css",
+      "preserved_path": ".vinext/fonts/geist-8ac0455e797f/style.css",
+      "sha256": "3a08a0ea04048682cb28073481f5d57a329caa5682643101cfb8eecedb3b96ba",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2",
+      "preserved_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2",
+      "sha256": "75b3bedbebc35f347c0ae3b416aa871941555357e7b0f83767eb5987875589ed",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-44745446.woff2",
+      "preserved_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-44745446.woff2",
+      "sha256": "745994b5cd950ec201b66526375f057d540847cccfc70f4f24f5f571d26d3923",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+      "preserved_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-mono-00e989178794/style.css",
+      "preserved_path": ".vinext/fonts/geist-mono-00e989178794/style.css",
+      "sha256": "05a2fb905ffabb1ad1d25c7e1463805682581259bea726e557847b0e2eba0410",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2",
+      "preserved_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2",
+      "sha256": "e27f657e38d52887baa3b6b2f812bef93dfdd356f0810e40edd4ee284cc7e9f6",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2",
+      "preserved_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2",
+      "sha256": "d67e4a94ba498635f764ddca7d1ec4271f5642f032eb24b426764480f66f8497",
+      "matches": true
+    },
+    {
+      "original_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2",
+      "preserved_path": ".vinext/fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2",
+      "sha256": "16e1d48b6dd29eb240aec5db36184eb182933c082cd43de7f35af686d58087d2",
+      "matches": true
+    },
+    {
+      "original_path": "tests/rendered-html.test.mjs",
+      "preserved_path": "tests/rendered-html.test.mjs",
+      "sha256": "469f95b132f4444be7938c3d0c055bf3206273be7f28aef483883558c1b76170",
+      "matches": true
+    },
+    {
+      "original_path": ".next/types/routes.d.ts",
+      "preserved_path": ".next/types/routes.d.ts",
+      "sha256": "dcbe5fe927cb4c86ffb9a8f335a196c8754d6c2bcb9797c7a961b05b7dfcb84f",
+      "matches": true
+    },
+    {
+      "original_path": ".cargo/config.toml",
+      "preserved_path": ".cargo/config.toml",
+      "sha256": "84fd4fa17fd967cae6006ba1b0dc430904239dec921c1441dd657387ee802d6c",
+      "matches": true
+    },
+    {
+      "original_path": "public/file.svg",
+      "preserved_path": "public/file.svg",
+      "sha256": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307",
+      "matches": true
+    },
+    {
+      "original_path": "public/og.png",
+      "preserved_path": "public/og.png",
+      "sha256": "f1d0012cc28a8b73e1d6cee49425e66bbb250ee512eee778d9098b55d10ffba7",
+      "matches": true
+    },
+    {
+      "original_path": "public/globe.svg",
+      "preserved_path": "public/globe.svg",
+      "sha256": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9",
+      "matches": true
+    },
+    {
+      "original_path": "public/window.svg",
+      "preserved_path": "public/window.svg",
+      "sha256": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66",
+      "matches": true
+    },
+    {
+      "original_path": "public/favicon.svg",
+      "preserved_path": "public/favicon.svg",
+      "sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+      "matches": true
+    },
+    {
+      "original_path": "public/wasm/civilization_simulator_engine.js",
+      "preserved_path": "public/wasm/civilization_simulator_engine.js",
+      "sha256": "1d5a903485e0462761579ece5385610829fb19f0ea851e380911a9a7775ba8f0",
+      "matches": true
+    },
+    {
+      "original_path": "public/wasm/civilization_simulator_engine_bg.wasm.d.ts",
+      "preserved_path": "public/wasm/civilization_simulator_engine_bg.wasm.d.ts",
+      "sha256": "1327f453b9e993f075d85e8fcd3f20a1e7e6a6a6af44ecd276487b772d5cbec8",
+      "matches": true
+    },
+    {
+      "original_path": "public/wasm/engine-loader.js",
+      "preserved_path": "public/wasm/engine-loader.js",
+      "sha256": "5404f16d890fb7dc9b7e65551dd843c93d254f22e675913a23a9f6b78db09cbf",
+      "matches": true
+    },
+    {
+      "original_path": "public/wasm/civilization_simulator_engine.d.ts",
+      "preserved_path": "public/wasm/civilization_simulator_engine.d.ts",
+      "sha256": "02e38f6ab4e2c311b475f7290e9326fcb545ed4e3391b38b3a01145da9742eec",
+      "matches": true
+    },
+    {
+      "original_path": "public/wasm/civilization_simulator_engine_bg.wasm",
+      "preserved_path": "public/wasm/civilization_simulator_engine_bg.wasm",
+      "sha256": "d32780d9126765b0894471e986cdea871c312f99b2a062be154f1a1944bbc818",
+      "matches": true
+    },
+    {
+      "original_path": "examples/d1/app/api/notes/route.ts",
+      "preserved_path": "examples/d1/app/api/notes/route.ts",
+      "sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909",
+      "matches": true
+    },
+    {
+      "original_path": "examples/d1/db/schema.ts",
+      "preserved_path": "examples/d1/db/schema.ts",
+      "sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454",
+      "matches": true
+    },
+    {
+      "original_path": "db/schema.ts",
+      "preserved_path": "db/schema.ts",
+      "sha256": "13ddacbf0be50e054d450a6c642b7fdc1aa943fd6b99084711e07e58b600390d",
+      "matches": true
+    },
+    {
+      "original_path": "db/index.ts",
+      "preserved_path": "db/index.ts",
+      "sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
+      "matches": true
+    },
+    {
+      "original_path": ".openai/hosting.json",
+      "preserved_path": ".openai/hosting.json",
+      "sha256": "1198e3144174b2e68a26f591d4e1375886662a17618d1d02e6c2d9802d40b5e4",
+      "matches": true
+    },
+    {
+      "original_path": "worker/index.ts",
+      "preserved_path": "worker/index.ts",
+      "sha256": "2ed36d7fa996e946d9d7695c5925e7760246f6bf8fa35c06f1bc515c087dc450",
+      "matches": true
+    },
+    {
+      "original_path": "engine/Cargo.toml",
+      "preserved_path": "engine/Cargo.toml",
+      "sha256": "e3e6029d97045b1da7e1d839854f5b5bd82ab3b204a7748d461c56e63f8f6e94",
+      "matches": true
+    },
+    {
+      "original_path": "engine/Cargo.lock",
+      "preserved_path": "engine/Cargo.lock",
+      "sha256": "fb8a771e5d907790ca289f3dbbf8e473b8baf89a6a55c1f82f1158b959d64784",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/lib.rs",
+      "preserved_path": "engine/src/lib.rs",
+      "sha256": "e9f7ef63f8688218adfba7d32ef14d6592e845a4ca1570ab624863455c7220ca",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/events.rs",
+      "preserved_path": "engine/src/simulation/events.rs",
+      "sha256": "d8019dcb50f919b54539bdaa751b237b5551593eff094e7f07581f42ff331c00",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/observer.rs",
+      "preserved_path": "engine/src/simulation/observer.rs",
+      "sha256": "4350c0c519d2f3c4a63340de1f61c4ab2a6a90ad9dd7b47a81e25260e16ffdfe",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/grid.rs",
+      "preserved_path": "engine/src/simulation/grid.rs",
+      "sha256": "d07061d7e8091cd6d65c29144177cd55a5a65408b931d4a1875992ae8e7efe04",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/world.rs",
+      "preserved_path": "engine/src/simulation/world.rs",
+      "sha256": "8cf3bf5f499f1d7938b90c35d1fbb93751179743df2954d602f7cdc14ae86308",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/mod.rs",
+      "preserved_path": "engine/src/simulation/mod.rs",
+      "sha256": "9a94aabd94e3d4b2ddfef6656a600466089d127ccb0fe4aa8132a9f172b04f57",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/technology.rs",
+      "preserved_path": "engine/src/simulation/technology.rs",
+      "sha256": "6a946a42e0ffba9a4165776ec4c96e97392e7f561ad94522b9bdfd2537f10356",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/nation.rs",
+      "preserved_path": "engine/src/simulation/nation.rs",
+      "sha256": "9d5ce62dd78a14374b15ab858fd2db155b26bfa63a83bbcd84160937e3ae76c8",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/components.rs",
+      "preserved_path": "engine/src/simulation/components.rs",
+      "sha256": "a79acc89cfbc7b72f519644a6eeaeb9fc7fdfcd0a68f04ad15fe11cf4ccd59ea",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/blocs.rs",
+      "preserved_path": "engine/src/simulation/blocs.rs",
+      "sha256": "20a77120011c37c4fb54b1c9c62367b9418d913557e43207334add9e6d62b601",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/resources.rs",
+      "preserved_path": "engine/src/simulation/resources.rs",
+      "sha256": "8f494b860dd482fb7104db4f2547494a66678d8533f1a92ce8a8c0913950c5d3",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/localization.rs",
+      "preserved_path": "engine/src/simulation/localization.rs",
+      "sha256": "1f07c06d8f6cf4636b3f97f019e0e1e8500a941da1ccba4545a94b1d843f3636",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/cosmic.rs",
+      "preserved_path": "engine/src/simulation/systems/cosmic.rs",
+      "sha256": "9609688f13676f04c9bb8350bb8b621810592b625b78cc69e4d2b420c264f69c",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/movement.rs",
+      "preserved_path": "engine/src/simulation/systems/movement.rs",
+      "sha256": "a13a6957416632a486978ad00faf1f6401ca17a43ac7ebeee121ebac8ded9ad4",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/civilization.rs",
+      "preserved_path": "engine/src/simulation/systems/civilization.rs",
+      "sha256": "60e0b0c9354c623e0410b818a2bb13258f7cc6f71843fa13c220458fec3296da",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/events.rs",
+      "preserved_path": "engine/src/simulation/systems/events.rs",
+      "sha256": "9d6d95a98079ef59189791bc11fb396b7378834dcf30f60871aa96ed32ec38b7",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/ideology.rs",
+      "preserved_path": "engine/src/simulation/systems/ideology.rs",
+      "sha256": "4d2e31b3b7bc485bf4a2a82446eea08f532badbb9e9d7d5262324c1811fefa36",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/security.rs",
+      "preserved_path": "engine/src/simulation/systems/security.rs",
+      "sha256": "8e2981770fd9905db90257083915d3306dca0548241a01968aa13cb251ce6055",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/ai.rs",
+      "preserved_path": "engine/src/simulation/systems/ai.rs",
+      "sha256": "431e48343bd18294e51bcd2df9ab487eaf45f3db5e9a4943d2b8d1a516cf593f",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/territory.rs",
+      "preserved_path": "engine/src/simulation/systems/territory.rs",
+      "sha256": "43b2155157961d3aa48ff3511692b00dee8b13b1c3bac7d6309bf370bd3cf117",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/missions.rs",
+      "preserved_path": "engine/src/simulation/systems/missions.rs",
+      "sha256": "35dddd37fb52149350b42d62b84adb1a8d12c83ef93683e041c4ad3d146b3ccf",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/warfare.rs",
+      "preserved_path": "engine/src/simulation/systems/warfare.rs",
+      "sha256": "fe4b88d9004e46922bdeb186cac14e973af5dcaef77b1544b5eada29f2c2b841",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/flood.rs",
+      "preserved_path": "engine/src/simulation/systems/flood.rs",
+      "sha256": "e1f8e67968e745718807a7b12acf7b3544e78a0ea4e6404269b87aef4067845f",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/economy.rs",
+      "preserved_path": "engine/src/simulation/systems/economy.rs",
+      "sha256": "5dd537cb762f0a36c7635d3fb0e1310c167a71eef88d7edfc3d986a62ce9f912",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/logging.rs",
+      "preserved_path": "engine/src/simulation/systems/logging.rs",
+      "sha256": "25d24a35fbbdbff289dc6ce481d4a3039cec6dd312aee11a8a0cd3127796027c",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/mod.rs",
+      "preserved_path": "engine/src/simulation/systems/mod.rs",
+      "sha256": "02a7ea1bb91ad36a130db240291097654088bc1b1670e0be2b8bb8cb33c9abd3",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/technology.rs",
+      "preserved_path": "engine/src/simulation/systems/technology.rs",
+      "sha256": "45f35151cd89086aac7cbb331504c850650a64ff1188035e1c85708f4585e1e5",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/demography.rs",
+      "preserved_path": "engine/src/simulation/systems/demography.rs",
+      "sha256": "f08135ccf404e3833e30ff7b9bfda649a2769bc7a2da88e5f8791ae2975f448a",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/blocs.rs",
+      "preserved_path": "engine/src/simulation/systems/blocs.rs",
+      "sha256": "e8413b54760b772e299b965c5cd7fb85cd4f87638ab0c33af90f250bc9568cfd",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/climate.rs",
+      "preserved_path": "engine/src/simulation/systems/climate.rs",
+      "sha256": "49a845f173c1abed4090cefd3b26be74ac42dc05f822dfa92cc1646046288edb",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/nuclear.rs",
+      "preserved_path": "engine/src/simulation/systems/nuclear.rs",
+      "sha256": "b0e0d795bffe544ee12c42a726b850941653be81d5481ca396742bc061923692",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/warfatigue.rs",
+      "preserved_path": "engine/src/simulation/systems/warfatigue.rs",
+      "sha256": "154bc27c759f4520cd0e8c0b5565dcb5857d0d71aa05c7853de2cec0ed5295a0",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/victory.rs",
+      "preserved_path": "engine/src/simulation/systems/victory.rs",
+      "sha256": "1ca5f0e211e25cf7170e0d7748b7cf31e813f23f3b804c740b1692dbda84ed8b",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/environment.rs",
+      "preserved_path": "engine/src/simulation/systems/environment.rs",
+      "sha256": "c98c38f29c751486a0b8672c34f9c0c5e4e44167c106577e8a27a8d4e6d82b77",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/diplomacy.rs",
+      "preserved_path": "engine/src/simulation/systems/diplomacy.rs",
+      "sha256": "4e8593540ade46754ed39259e5e8e95df6d88d4d656914370765140cde0ac16a",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/peace.rs",
+      "preserved_path": "engine/src/simulation/systems/peace.rs",
+      "sha256": "5ad9de51111b29680b38d330fe148b4d764aa98916b9248f4905696b9d0d4fb1",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/cycles.rs",
+      "preserved_path": "engine/src/simulation/systems/cycles.rs",
+      "sha256": "cf76f0747024615e3e51e059670dc8f46b0cc5f0fa8bc6cb5eb6176e4f6cfb7f",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/supply.rs",
+      "preserved_path": "engine/src/simulation/systems/supply.rs",
+      "sha256": "b2d1d18cdccd7c14af400e671490a2d792002593bcdaae0a00feff62d68dcfb0",
+      "matches": true
+    },
+    {
+      "original_path": "engine/src/simulation/systems/richness.rs",
+      "preserved_path": "engine/src/simulation/systems/richness.rs",
+      "sha256": "dbd573ec3b79cfbeea118f77f6840766e7fc9b81b5d5ecd7f4fbb7c1853a1aab",
+      "matches": true
+    },
+    {
+      "original_path": ".wrangler/.DS_Store",
+      "preserved_path": ".wrangler/.DS_Store",
+      "sha256": "a5db93c4859a2c410f80a605447ac6ced27cb2a6253a4b91cfb28616d297d055",
+      "matches": true
+    },
+    {
+      "original_path": ".wrangler/deploy/config.json",
+      "preserved_path": ".wrangler/deploy/config.json",
+      "sha256": "3bb45bee9081f928ffba85d40a8dcf66a59f80b03f5ce36ee5d35c2a0ed92e3c",
+      "matches": true
+    },
+    {
+      "original_path": ".wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite-shm",
+      "preserved_path": ".wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite-shm",
+      "sha256": "294a0f63a5283987cf2212d2fbda88ade3f9255d41c52b3ed80896cda18f07b0",
+      "matches": true
+    },
+    {
+      "original_path": ".wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite",
+      "preserved_path": ".wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite",
+      "sha256": "4c34b48e33536be849e9810707c97ff2b5625bb5cbf1637dbe384cfffdda3b9d",
+      "matches": true
+    },
+    {
+      "original_path": ".wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite-wal",
+      "preserved_path": ".wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite-wal",
+      "sha256": "bfd3a6c3120ed5c3e992890bfa663636a5372318b78f4ed629ed95bc5e07f9f4",
+      "matches": true
+    },
+    {
+      "original_path": "drizzle/meta/_journal.json",
+      "preserved_path": "drizzle/meta/_journal.json",
+      "sha256": "90cb374e093894d0efce6f1830d873a42aadd8ba49d2f024495e5cb2e1c8c303",
+      "matches": true
+    }
+  ]
+}
