@@ -1,0 +1,994 @@
+{
+  "targets": [
+    "node_modules/.vite",
+    ".vinext/dev",
+    ".wrangler/registry"
+  ],
+  "reason": "Vite optimizer metadata identifies regenerable dependency bundles; dead Vinext development lock (PID 20305); inactive Miniflare worker discovery registry. ps/lsof found no project server/build or open files. Fonts, local state and deploy metadata preserved.",
+  "files": [
+    {
+      "path": "node_modules/.vite/deps_ssr/_metadata.json",
+      "bytes": 2701,
+      "allocated": 4096,
+      "sha256": "2aea22ca959b23c66533d6baa2f8923269e25c831dea7c5a14955428953a9c08"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_headers.js 2.map",
+      "bytes": 57595,
+      "allocated": 61440,
+      "sha256": "26d5fd8861e152edaa779b4b6cc8aa015706590ad7578ec42e10bab10f272617"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom.js 2.map",
+      "bytes": 25581,
+      "allocated": 28672,
+      "sha256": "cad02247ce7d5cdc27832fdfe483ecb5f0189e97f88f04d356afeca2750acfee"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom_server__edge 2.js",
+      "bytes": 303389,
+      "allocated": 307200,
+      "sha256": "4fe8bd7fa7651bb159254bb8965509ba010c3c0d0e1271565820580655e4f2bc"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/parse-cookie-CiOSCy7J.js 2.map",
+      "bytes": 7623,
+      "allocated": 8192,
+      "sha256": "67dbb98d80ab30d800ed48b30f9316fa28838c661ef04798ca8fd14370bf0bde"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-BejDdLFV.js.map",
+      "bytes": 68669,
+      "allocated": 69632,
+      "sha256": "ab61d883432dba2d1f92ec62f767d97b33f5e4a4af0a4f52704eb225c3428ab6"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/hybrid-client-route-owner-DjBEbmNo.js",
+      "bytes": 49404,
+      "allocated": 53248,
+      "sha256": "e464231c60e39d71eb8296baa8e2b250050854aa1be3fa9f221e7b761f0800c5"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom-server.edge.development-DdJIkvBR.js 2.map",
+      "bytes": 590989,
+      "allocated": 593920,
+      "sha256": "1731e202c2e9f5cc1c9862928f91cc8e9a58b507f122152678dda134184459ea"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_headers.js.map",
+      "bytes": 57595,
+      "allocated": 61440,
+      "sha256": "26d5fd8861e152edaa779b4b6cc8aa015706590ad7578ec42e10bab10f272617"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-BejDdLFV.js 2.map",
+      "bytes": 68669,
+      "allocated": 69632,
+      "sha256": "ab61d883432dba2d1f92ec62f767d97b33f5e4a4af0a4f52704eb225c3428ab6"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/ppr-fallback-shell-DOd7NJiQ.js",
+      "bytes": 11498,
+      "allocated": 12288,
+      "sha256": "daa64e4a304fe74ee3f988b805ac1ca9e57b1f4daa13ab68d828a3275603a8ed"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom 2.js",
+      "bytes": 14533,
+      "allocated": 16384,
+      "sha256": "980c41205f8befab62bc59da52e97419f50a9c345b5f8a43ce4f1c2dc7291081"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_font_google 2.js",
+      "bytes": 16907,
+      "allocated": 20480,
+      "sha256": "68b326d2b4afe8fa477009ef56c20e2f1dce526aa3d93a64f2c404f049385550"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react_jsx-dev-runtime.js",
+      "bytes": 10476,
+      "allocated": 12288,
+      "sha256": "0d27d5ae63483b1893337d470c84b87030e7f249fb9b04116821e188ac65a5d3"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react.js",
+      "bytes": 90,
+      "allocated": 4096,
+      "sha256": "f8c4230b9726dccfa84f7ad1dc9c1775b3f55a19ff6043cfe60a9bcd76ef3ec9"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react_jsx-dev-runtime 2.js",
+      "bytes": 10476,
+      "allocated": 12288,
+      "sha256": "0d27d5ae63483b1893337d470c84b87030e7f249fb9b04116821e188ac65a5d3"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_font_google.js 2.map",
+      "bytes": 26900,
+      "allocated": 28672,
+      "sha256": "d3cc08d9483fdda61d8e14d8ca64b2db850d917248a046b5aa9e877966003cd7"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom-server.edge.development-DdJIkvBR.js",
+      "bytes": 325729,
+      "allocated": 327680,
+      "sha256": "16814aca9e68ac034d159f556070a51ea8ab0219a8ec81990d1066a4af515e40"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-server-dom-webpack_client__edge.js.map",
+      "bytes": 263527,
+      "allocated": 266240,
+      "sha256": "fa1a878d6dff5dab3a27be036b303553b7490a5ceae8c9c4cc0ccf6745027224"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/hybrid-client-route-owner-DjBEbmNo.js 2.map",
+      "bytes": 110203,
+      "allocated": 110592,
+      "sha256": "b6e654bcd528381fb4718d6300ab721afb27cbfd39d3100a9c365056d6d28ee2"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_font_google.js.map",
+      "bytes": 26900,
+      "allocated": 28672,
+      "sha256": "d3cc08d9483fdda61d8e14d8ca64b2db850d917248a046b5aa9e877966003cd7"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom.js.map",
+      "bytes": 25581,
+      "allocated": 28672,
+      "sha256": "cad02247ce7d5cdc27832fdfe483ecb5f0189e97f88f04d356afeca2750acfee"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_navigation.js",
+      "bytes": 173873,
+      "allocated": 176128,
+      "sha256": "028b9005f57cf752fa99b937de38b376eb4b9804ecada6de03855d53e21fa683"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/hybrid-client-route-owner-DjBEbmNo 2.js",
+      "bytes": 49404,
+      "allocated": 53248,
+      "sha256": "e464231c60e39d71eb8296baa8e2b250050854aa1be3fa9f221e7b761f0800c5"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/parse-cookie-CiOSCy7J 2.js",
+      "bytes": 4176,
+      "allocated": 8192,
+      "sha256": "c5fa66dbf72ec4177511ad65c98ae908b2db90b7a0f7af99d98596e7c840ea9c"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_navigation.js.map",
+      "bytes": 311305,
+      "allocated": 315392,
+      "sha256": "0415ab21ef95afe5799347e2f17df7ab184bbadba1692769c937399c3a9d45cb"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/parse-cookie-CiOSCy7J.js",
+      "bytes": 4176,
+      "allocated": 8192,
+      "sha256": "c5fa66dbf72ec4177511ad65c98ae908b2db90b7a0f7af99d98596e7c840ea9c"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom-server.edge.development-DdJIkvBR 2.js",
+      "bytes": 325729,
+      "allocated": 327680,
+      "sha256": "16814aca9e68ac034d159f556070a51ea8ab0219a8ec81990d1066a4af515e40"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/package 2.json",
+      "bytes": 23,
+      "allocated": 4096,
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom_server__edge.js 2.map",
+      "bytes": 550458,
+      "allocated": 552960,
+      "sha256": "3c569c3703dd5a208d85e754dcbb576078f1a17a3cd74384cde444958d4ede77"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom_static__edge.js 2.map",
+      "bytes": 553,
+      "allocated": 4096,
+      "sha256": "aa2650d9c2e4fcce1e1fe30b03688bcba32f2087e092823ef66e720613f34aee"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react_jsx-runtime.js.map",
+      "bytes": 18615,
+      "allocated": 20480,
+      "sha256": "93a1c34d6b1dc10c5b1718b28e6ea59674b287c4af74dc14613e01807af04957"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom_server__edge.js.map",
+      "bytes": 550458,
+      "allocated": 552960,
+      "sha256": "3c569c3703dd5a208d85e754dcbb576078f1a17a3cd74384cde444958d4ede77"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react_jsx-runtime.js",
+      "bytes": 10786,
+      "allocated": 12288,
+      "sha256": "8d099efc823cfeb3379b8ad2d027aab38fcb61d9a7b6f65e49e675e2d476b22b"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/package.json",
+      "bytes": 23,
+      "allocated": 4096,
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/hybrid-client-route-owner-direct-DAFDcgMa.js 2.map",
+      "bytes": 32393,
+      "allocated": 32768,
+      "sha256": "9a4790748565ed07f73206a4c1d33312a2ed10a37dcd7229a654558bece7c201"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/ppr-fallback-shell-DOd7NJiQ 2.js",
+      "bytes": 11498,
+      "allocated": 12288,
+      "sha256": "daa64e4a304fe74ee3f988b805ac1ca9e57b1f4daa13ab68d828a3275603a8ed"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_font_google.js",
+      "bytes": 16907,
+      "allocated": 20480,
+      "sha256": "68b326d2b4afe8fa477009ef56c20e2f1dce526aa3d93a64f2c404f049385550"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom.js",
+      "bytes": 14533,
+      "allocated": 16384,
+      "sha256": "980c41205f8befab62bc59da52e97419f50a9c345b5f8a43ce4f1c2dc7291081"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/ppr-fallback-shell-DOd7NJiQ.js 2.map",
+      "bytes": 26465,
+      "allocated": 28672,
+      "sha256": "19e011577096cce5b56939e2d2a58496e68f6c8ba9a5326aac76538e7e55b287"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react_jsx-dev-runtime.js 2.map",
+      "bytes": 18047,
+      "allocated": 20480,
+      "sha256": "f86f39bb9a884f5bbd7f60fb7f11a1d493f0eda9906146d49365868b404afb60"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-server-dom-webpack_client__edge.js 2.map",
+      "bytes": 263527,
+      "allocated": 266240,
+      "sha256": "fa1a878d6dff5dab3a27be036b303553b7490a5ceae8c9c4cc0ccf6745027224"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_navigation.js 2.map",
+      "bytes": 311305,
+      "allocated": 315392,
+      "sha256": "0415ab21ef95afe5799347e2f17df7ab184bbadba1692769c937399c3a9d45cb"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/hybrid-client-route-owner-direct-DAFDcgMa.js",
+      "bytes": 13904,
+      "allocated": 16384,
+      "sha256": "fb388bb6309970442484fd309c1206625a15f401b486539bf81dc4feb94143ed"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom_static__edge.js",
+      "bytes": 569,
+      "allocated": 4096,
+      "sha256": "38f261f105f14ae646d7d5529493bd9de0491d2b1b808db78951bee593362b02"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/hybrid-client-route-owner-direct-DAFDcgMa 2.js",
+      "bytes": 13904,
+      "allocated": 16384,
+      "sha256": "fb388bb6309970442484fd309c1206625a15f401b486539bf81dc4feb94143ed"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_navigation 2.js",
+      "bytes": 173873,
+      "allocated": 176128,
+      "sha256": "028b9005f57cf752fa99b937de38b376eb4b9804ecada6de03855d53e21fa683"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react_jsx-dev-runtime.js.map",
+      "bytes": 18047,
+      "allocated": 20480,
+      "sha256": "f86f39bb9a884f5bbd7f60fb7f11a1d493f0eda9906146d49365868b404afb60"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom-server.edge.development-DdJIkvBR.js.map",
+      "bytes": 590989,
+      "allocated": 593920,
+      "sha256": "1731e202c2e9f5cc1c9862928f91cc8e9a58b507f122152678dda134184459ea"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/ppr-fallback-shell-DOd7NJiQ.js.map",
+      "bytes": 26465,
+      "allocated": 28672,
+      "sha256": "19e011577096cce5b56939e2d2a58496e68f6c8ba9a5326aac76538e7e55b287"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom_static__edge.js.map",
+      "bytes": 553,
+      "allocated": 4096,
+      "sha256": "aa2650d9c2e4fcce1e1fe30b03688bcba32f2087e092823ef66e720613f34aee"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-server-dom-webpack_client__edge 2.js",
+      "bytes": 133350,
+      "allocated": 135168,
+      "sha256": "8e98119d2e7940548b3094873ac0047ed78e5e55ff8e208daefe8e72b6e0c19b"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/parse-cookie-CiOSCy7J.js.map",
+      "bytes": 7623,
+      "allocated": 8192,
+      "sha256": "67dbb98d80ab30d800ed48b30f9316fa28838c661ef04798ca8fd14370bf0bde"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom_static__edge 2.js",
+      "bytes": 569,
+      "allocated": 4096,
+      "sha256": "38f261f105f14ae646d7d5529493bd9de0491d2b1b808db78951bee593362b02"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_headers 2.js",
+      "bytes": 37623,
+      "allocated": 40960,
+      "sha256": "b96a41ce6fb5cd499fc2221454a321ff4bae1596dea03cece5edc4ee1c5120db"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react_jsx-runtime.js 2.map",
+      "bytes": 18615,
+      "allocated": 20480,
+      "sha256": "93a1c34d6b1dc10c5b1718b28e6ea59674b287c4af74dc14613e01807af04957"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-server-dom-webpack_client__edge.js",
+      "bytes": 133350,
+      "allocated": 135168,
+      "sha256": "8e98119d2e7940548b3094873ac0047ed78e5e55ff8e208daefe8e72b6e0c19b"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/hybrid-client-route-owner-direct-DAFDcgMa.js.map",
+      "bytes": 32393,
+      "allocated": 32768,
+      "sha256": "9a4790748565ed07f73206a4c1d33312a2ed10a37dcd7229a654558bece7c201"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react_jsx-runtime 2.js",
+      "bytes": 10786,
+      "allocated": 12288,
+      "sha256": "8d099efc823cfeb3379b8ad2d027aab38fcb61d9a7b6f65e49e675e2d476b22b"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-dom_server__edge.js",
+      "bytes": 303389,
+      "allocated": 307200,
+      "sha256": "4fe8bd7fa7651bb159254bb8965509ba010c3c0d0e1271565820580655e4f2bc"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/next_headers.js",
+      "bytes": 37623,
+      "allocated": 40960,
+      "sha256": "b96a41ce6fb5cd499fc2221454a321ff4bae1596dea03cece5edc4ee1c5120db"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/_metadata 2.json",
+      "bytes": 2701,
+      "allocated": 4096,
+      "sha256": "4ae704e5c0a9ed78cf83668bbbda8c8c89534c7e0c4f81ba17515b3330828ca3"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-BejDdLFV 2.js",
+      "bytes": 39319,
+      "allocated": 40960,
+      "sha256": "0e6313a36d15c4c68577d6b509a835e4d55e0c98573d514de6c1510176654491"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react 2.js",
+      "bytes": 90,
+      "allocated": 4096,
+      "sha256": "f8c4230b9726dccfa84f7ad1dc9c1775b3f55a19ff6043cfe60a9bcd76ef3ec9"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/react-BejDdLFV.js",
+      "bytes": 39319,
+      "allocated": 40960,
+      "sha256": "0e6313a36d15c4c68577d6b509a835e4d55e0c98573d514de6c1510176654491"
+    },
+    {
+      "path": "node_modules/.vite/deps_ssr/hybrid-client-route-owner-DjBEbmNo.js.map",
+      "bytes": 110203,
+      "allocated": 110592,
+      "sha256": "b6e654bcd528381fb4718d6300ab721afb27cbfd39d3100a9c365056d6d28ee2"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/_metadata.json",
+      "bytes": 2399,
+      "allocated": 4096,
+      "sha256": "101894ab10f8e519af7f5041b3663b648a30954851a299d5e1e8dee1fdd2d075"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_headers.js 2.map",
+      "bytes": 90778,
+      "allocated": 94208,
+      "sha256": "83a20241c5b4de2ef9d1aa29640a1e33ce2df5e4f631a64d930e42ff7c0506c1"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_static__edge.js.map",
+      "bytes": 473,
+      "allocated": 4096,
+      "sha256": "6a8b6e6c85db7aa984153b535bd98070a255e445b88d2a9d568139b9c66c32b5"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-dom.js 2.map",
+      "bytes": 19514,
+      "allocated": 20480,
+      "sha256": "afd9d7a3392f05630596ae4a834963a77b6495b1c946e775859f1646c21797c0"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_server__edge 2.js",
+      "bytes": 1053,
+      "allocated": 4096,
+      "sha256": "cf5418d59601cbd22d7b2aad595681f908e74eaad036e2e45beb1fe4de97ab24"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_static__edge.js",
+      "bytes": 563,
+      "allocated": 4096,
+      "sha256": "5bdd44cc78b1fbadba7ac7aa2ebc32023c0d7de8e73f72df40a305457d48aafc"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_headers.js.map",
+      "bytes": 90778,
+      "allocated": 94208,
+      "sha256": "83a20241c5b4de2ef9d1aa29640a1e33ce2df5e4f631a64d930e42ff7c0506c1"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-dom 2.js",
+      "bytes": 11720,
+      "allocated": 12288,
+      "sha256": "54c326f666d992de022e9e9be0b6c951816799bdf6c0227ffae78dcb2f3c743b"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_font_google 2.js",
+      "bytes": 16907,
+      "allocated": 20480,
+      "sha256": "68b326d2b4afe8fa477009ef56c20e2f1dce526aa3d93a64f2c404f049385550"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react_jsx-dev-runtime.js",
+      "bytes": 11544,
+      "allocated": 12288,
+      "sha256": "f943905f0d2ee29cf9532c50b72ac2a44f76cf499647e70d8c402c49bf29f9a6"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react.js",
+      "bytes": 129,
+      "allocated": 4096,
+      "sha256": "9cdea5068f9d4bb5544d03ac30b81a286f5399874e52f7caf3cf1795a9877c59"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react_jsx-dev-runtime 2.js",
+      "bytes": 11544,
+      "allocated": 12288,
+      "sha256": "f943905f0d2ee29cf9532c50b72ac2a44f76cf499647e70d8c402c49bf29f9a6"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react.react-server-Bc2yxHIQ.js 2.map",
+      "bytes": 45046,
+      "allocated": 45056,
+      "sha256": "e25b1620bf9673c71e1aad993043fa1206c46791f891479e86138a27a7e079eb"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_font_google.js 2.map",
+      "bytes": 26900,
+      "allocated": 28672,
+      "sha256": "d3cc08d9483fdda61d8e14d8ca64b2db850d917248a046b5aa9e877966003cd7"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_server__edge.js.map",
+      "bytes": 1147,
+      "allocated": 4096,
+      "sha256": "58aded79e9f7135b5b0c6ac78222b4c177b8e1f6080e8b695c9de7cec40c7d25"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_server__edge.js",
+      "bytes": 1053,
+      "allocated": 4096,
+      "sha256": "cf5418d59601cbd22d7b2aad595681f908e74eaad036e2e45beb1fe4de97ab24"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_client__edge.js.map",
+      "bytes": 263528,
+      "allocated": 266240,
+      "sha256": "28ee36cd46c3c358a1834c08612922da5d83003d51d8aeba2c442cec85f12c74"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack-server.edge.development-BdZaaYzQ.js 2.map",
+      "bytes": 319075,
+      "allocated": 319488,
+      "sha256": "fd066a8893f1a435c4ea3c54f792883e8c49d025d9ecdf1a660a512a61665bda"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_static__edge.js 2.map",
+      "bytes": 473,
+      "allocated": 4096,
+      "sha256": "6a8b6e6c85db7aa984153b535bd98070a255e445b88d2a9d568139b9c66c32b5"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_server__edge.js 2.map",
+      "bytes": 1147,
+      "allocated": 4096,
+      "sha256": "58aded79e9f7135b5b0c6ac78222b4c177b8e1f6080e8b695c9de7cec40c7d25"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react.react-server-Bc2yxHIQ.js",
+      "bytes": 25853,
+      "allocated": 28672,
+      "sha256": "637c41a665de57c97d3886d5cd3c72033c4a2c5834a62d43290e41a8e25864be"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack-server.edge.development-BdZaaYzQ.js",
+      "bytes": 167231,
+      "allocated": 167936,
+      "sha256": "1d4cdc9c51e233af0f441cda0e2433f3af5099b36ba0d8c8e624c34309592e01"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_font_google.js.map",
+      "bytes": 26900,
+      "allocated": 28672,
+      "sha256": "d3cc08d9483fdda61d8e14d8ca64b2db850d917248a046b5aa9e877966003cd7"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-dom.js.map",
+      "bytes": 19514,
+      "allocated": 20480,
+      "sha256": "afd9d7a3392f05630596ae4a834963a77b6495b1c946e775859f1646c21797c0"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_navigation.js",
+      "bytes": 10895,
+      "allocated": 12288,
+      "sha256": "112def866f320c283bcd55df56edb2751a25b764f42471080f0dfc618ed43832"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_navigation.js.map",
+      "bytes": 18624,
+      "allocated": 20480,
+      "sha256": "7348dfa61072fe2277bc7df0ad8bfebe42a3f6be409c7c9d0fb3f5cc77ef1392"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/package 2.json",
+      "bytes": 23,
+      "allocated": 4096,
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react_jsx-runtime.js.map",
+      "bytes": 19672,
+      "allocated": 20480,
+      "sha256": "a5ce413d9a6b9cbfdc182ade2365d5a2d0915079fc5d3dd6d437096a0466d64a"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react_jsx-runtime.js",
+      "bytes": 11512,
+      "allocated": 12288,
+      "sha256": "69e5404e287f081f7ce1031d87fbf98969d47900a6a8169b8e8a011e9d6a70a5"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/package.json",
+      "bytes": 23,
+      "allocated": 4096,
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_font_google.js",
+      "bytes": 16907,
+      "allocated": 20480,
+      "sha256": "68b326d2b4afe8fa477009ef56c20e2f1dce526aa3d93a64f2c404f049385550"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-dom.js",
+      "bytes": 11720,
+      "allocated": 12288,
+      "sha256": "54c326f666d992de022e9e9be0b6c951816799bdf6c0227ffae78dcb2f3c743b"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react_jsx-dev-runtime.js 2.map",
+      "bytes": 19696,
+      "allocated": 20480,
+      "sha256": "34f4fc78069238c984baa9116bb359712f5060c4996b58e23216eb42c9599185"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_client__edge.js 2.map",
+      "bytes": 263528,
+      "allocated": 266240,
+      "sha256": "28ee36cd46c3c358a1834c08612922da5d83003d51d8aeba2c442cec85f12c74"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_navigation.js 2.map",
+      "bytes": 18624,
+      "allocated": 20480,
+      "sha256": "7348dfa61072fe2277bc7df0ad8bfebe42a3f6be409c7c9d0fb3f5cc77ef1392"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack-server.edge.development-BdZaaYzQ.js.map",
+      "bytes": 319075,
+      "allocated": 319488,
+      "sha256": "fd066a8893f1a435c4ea3c54f792883e8c49d025d9ecdf1a660a512a61665bda"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_navigation 2.js",
+      "bytes": 10895,
+      "allocated": 12288,
+      "sha256": "112def866f320c283bcd55df56edb2751a25b764f42471080f0dfc618ed43832"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react.react-server-Bc2yxHIQ.js.map",
+      "bytes": 45046,
+      "allocated": 45056,
+      "sha256": "e25b1620bf9673c71e1aad993043fa1206c46791f891479e86138a27a7e079eb"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react_jsx-dev-runtime.js.map",
+      "bytes": 19696,
+      "allocated": 20480,
+      "sha256": "34f4fc78069238c984baa9116bb359712f5060c4996b58e23216eb42c9599185"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_client__edge 2.js",
+      "bytes": 133415,
+      "allocated": 135168,
+      "sha256": "7e7813be1aea82ae433be39f06f3c89b875f905dc2b6daa93f05f43136faf0bc"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react.react-server-Bc2yxHIQ 2.js",
+      "bytes": 25853,
+      "allocated": 28672,
+      "sha256": "637c41a665de57c97d3886d5cd3c72033c4a2c5834a62d43290e41a8e25864be"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_headers 2.js",
+      "bytes": 49863,
+      "allocated": 53248,
+      "sha256": "a40b6842a26bd3183f6cfaa0f3970a8f3e9239fc2551d6f34a03ba163055a1ca"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react_jsx-runtime.js 2.map",
+      "bytes": 19672,
+      "allocated": 20480,
+      "sha256": "a5ce413d9a6b9cbfdc182ade2365d5a2d0915079fc5d3dd6d437096a0466d64a"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_client__edge.js",
+      "bytes": 133415,
+      "allocated": 135168,
+      "sha256": "7e7813be1aea82ae433be39f06f3c89b875f905dc2b6daa93f05f43136faf0bc"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react_jsx-runtime 2.js",
+      "bytes": 11512,
+      "allocated": 12288,
+      "sha256": "69e5404e287f081f7ce1031d87fbf98969d47900a6a8169b8e8a011e9d6a70a5"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack_static__edge 2.js",
+      "bytes": 563,
+      "allocated": 4096,
+      "sha256": "5bdd44cc78b1fbadba7ac7aa2ebc32023c0d7de8e73f72df40a305457d48aafc"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/next_headers.js",
+      "bytes": 49863,
+      "allocated": 53248,
+      "sha256": "a40b6842a26bd3183f6cfaa0f3970a8f3e9239fc2551d6f34a03ba163055a1ca"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/_metadata 2.json",
+      "bytes": 2399,
+      "allocated": 4096,
+      "sha256": "fa6c593c2e90f159978ef802e424da59f7d854abdf43983feb2a0103714ef879"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react-server-dom-webpack-server.edge.development-BdZaaYzQ 2.js",
+      "bytes": 167231,
+      "allocated": 167936,
+      "sha256": "1d4cdc9c51e233af0f441cda0e2433f3af5099b36ba0d8c8e624c34309592e01"
+    },
+    {
+      "path": "node_modules/.vite/deps_rsc/react 2.js",
+      "bytes": 129,
+      "allocated": 4096,
+      "sha256": "9cdea5068f9d4bb5544d03ac30b81a286f5399874e52f7caf3cf1795a9877c59"
+    },
+    {
+      "path": "node_modules/.vite/deps/_metadata.json",
+      "bytes": 1660,
+      "allocated": 4096,
+      "sha256": "79c8fccaf43a4cdbd4e389c7e5cf1bc3514eab9a86f5c49cc1f3ae98e85dcea1"
+    },
+    {
+      "path": "node_modules/.vite/deps/next_headers.js 2.map",
+      "bytes": 91581,
+      "allocated": 94208,
+      "sha256": "4981ea3a538b5c0679125c3d7618d89e5038f3ce9117fe92d96b946a5f4a9cee"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-dom.js 2.map",
+      "bytes": 25582,
+      "allocated": 28672,
+      "sha256": "7be6b06760b79fad71c303bca35d2972a64e54a1fcc55ca45915c5eee27db91b"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-server-dom-webpack_client__browser.js.map",
+      "bytes": 265440,
+      "allocated": 266240,
+      "sha256": "5d23fad111634b1289a2fdf6a6e74e1dee4bc8d2ce64679dcf1f33d1d7aa3275"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-dom_client.js",
+      "bytes": 820880,
+      "allocated": 823296,
+      "sha256": "8dc2014d82139d116b32d9b0d4b6f9b5103b4e0bc831a7a56b0860948f8eec1f"
+    },
+    {
+      "path": "node_modules/.vite/deps/next_headers.js.map",
+      "bytes": 91581,
+      "allocated": 94208,
+      "sha256": "4981ea3a538b5c0679125c3d7618d89e5038f3ce9117fe92d96b946a5f4a9cee"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-dom 2.js",
+      "bytes": 14562,
+      "allocated": 16384,
+      "sha256": "54694bfdc4dbd68b59af06ddb089328fbf50e944d3df0ed74529dcedf790dade"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-dom_client.js 2.map",
+      "bytes": 1498118,
+      "allocated": 1499136,
+      "sha256": "c622c7b37f2f939031cde1a54e7548512238eb96ecc87a3ac056ef4ffcc5d750"
+    },
+    {
+      "path": "node_modules/.vite/deps/next_font_google 2.js",
+      "bytes": 16907,
+      "allocated": 20480,
+      "sha256": "68b326d2b4afe8fa477009ef56c20e2f1dce526aa3d93a64f2c404f049385550"
+    },
+    {
+      "path": "node_modules/.vite/deps/react_jsx-dev-runtime.js",
+      "bytes": 10505,
+      "allocated": 12288,
+      "sha256": "18ee5832823416741a2d8d571d9b099ae7207c874e56ac3076793bb24dff914e"
+    },
+    {
+      "path": "node_modules/.vite/deps/react.js",
+      "bytes": 38269,
+      "allocated": 40960,
+      "sha256": "d2ef22f4d0bba68f1d024ee0fb3aea8641be03ca10d46842fe95528aa21a0943"
+    },
+    {
+      "path": "node_modules/.vite/deps/_metadata-rsc.json",
+      "bytes": 1729,
+      "allocated": 4096,
+      "sha256": "54e7d6fce38ce3ff5a55a7b9dbe9b3313c0b71befb34416cfbcea71dcf7a3619"
+    },
+    {
+      "path": "node_modules/.vite/deps/react_jsx-dev-runtime 2.js",
+      "bytes": 10505,
+      "allocated": 12288,
+      "sha256": "a7d9192a88fef754a8fed0d19cf229ad54d51158ce61e79284cab1fa611215fb"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-dom_client.js.map",
+      "bytes": 1498118,
+      "allocated": 1499136,
+      "sha256": "c622c7b37f2f939031cde1a54e7548512238eb96ecc87a3ac056ef4ffcc5d750"
+    },
+    {
+      "path": "node_modules/.vite/deps/next_font_google.js 2.map",
+      "bytes": 26900,
+      "allocated": 28672,
+      "sha256": "d3cc08d9483fdda61d8e14d8ca64b2db850d917248a046b5aa9e877966003cd7"
+    },
+    {
+      "path": "node_modules/.vite/deps/react.js 2.map",
+      "bytes": 68638,
+      "allocated": 69632,
+      "sha256": "ef23a74937485e8bd4c8e5353305119087e11f060a2f4d0391e85ab1cd61feb5"
+    },
+    {
+      "path": "node_modules/.vite/deps/next_font_google.js.map",
+      "bytes": 26900,
+      "allocated": 28672,
+      "sha256": "d3cc08d9483fdda61d8e14d8ca64b2db850d917248a046b5aa9e877966003cd7"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-dom.js.map",
+      "bytes": 25582,
+      "allocated": 28672,
+      "sha256": "7be6b06760b79fad71c303bca35d2972a64e54a1fcc55ca45915c5eee27db91b"
+    },
+    {
+      "path": "node_modules/.vite/deps/chunk-CFx7f7Oh.js",
+      "bytes": 192,
+      "allocated": 4096,
+      "sha256": "8857aad4f904253f9a8bb160ae7ca249376498df7c3510b0cd92b4e5a2c3b6cb"
+    },
+    {
+      "path": "node_modules/.vite/deps/package 2.json",
+      "bytes": 23,
+      "allocated": 4096,
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+    },
+    {
+      "path": "node_modules/.vite/deps/_metadata-rsc 2.json",
+      "bytes": 1786,
+      "allocated": 4096,
+      "sha256": "c83e3eb47f8b49f9ecda68498878ba017dff89d2d360efb7ae2c3000c1702fd8"
+    },
+    {
+      "path": "node_modules/.vite/deps/react_jsx-runtime.js.map",
+      "bytes": 18616,
+      "allocated": 20480,
+      "sha256": "b69ba7cf38f48de57ae38c7d7c56c9ed0bb99a3d3fd60fef6f3dbf9c4b40b5d8"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-server-dom-webpack_client__browser 2.js",
+      "bytes": 134226,
+      "allocated": 135168,
+      "sha256": "1fa573be33f2c26c3a1f9299feab407e33def3c10fdd7a16dad3ec2f601c26a4"
+    },
+    {
+      "path": "node_modules/.vite/deps/react_jsx-runtime.js",
+      "bytes": 10778,
+      "allocated": 12288,
+      "sha256": "cf31bdfcbc045c64b119bb73fe633cbb89f70c23e04b571f67aadc9d7befb5db"
+    },
+    {
+      "path": "node_modules/.vite/deps/package.json",
+      "bytes": 23,
+      "allocated": 4096,
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+    },
+    {
+      "path": "node_modules/.vite/deps/next_font_google.js",
+      "bytes": 16907,
+      "allocated": 20480,
+      "sha256": "68b326d2b4afe8fa477009ef56c20e2f1dce526aa3d93a64f2c404f049385550"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-dom.js",
+      "bytes": 14562,
+      "allocated": 16384,
+      "sha256": "a9ec206c6b7b3d8bee2b864056de4a96ed8260e2d49a9d28f7a0fdd19f7e4d24"
+    },
+    {
+      "path": "node_modules/.vite/deps/react_jsx-dev-runtime.js 2.map",
+      "bytes": 18048,
+      "allocated": 20480,
+      "sha256": "df0ecc2dc1aa22b3f70a4b978b11fb5ab08e2a420eb9c4a6500de7e16312ca73"
+    },
+    {
+      "path": "node_modules/.vite/deps/react.js.map",
+      "bytes": 68638,
+      "allocated": 69632,
+      "sha256": "ef23a74937485e8bd4c8e5353305119087e11f060a2f4d0391e85ab1cd61feb5"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-dom_client 2.js",
+      "bytes": 820880,
+      "allocated": 823296,
+      "sha256": "5fda9ea9ef6427ff492d42cece38736a93a404c70ed0d104f55af2bb6467ecf1"
+    },
+    {
+      "path": "node_modules/.vite/deps/react_jsx-dev-runtime.js.map",
+      "bytes": 18048,
+      "allocated": 20480,
+      "sha256": "df0ecc2dc1aa22b3f70a4b978b11fb5ab08e2a420eb9c4a6500de7e16312ca73"
+    },
+    {
+      "path": "node_modules/.vite/deps/next_headers 2.js",
+      "bytes": 50498,
+      "allocated": 53248,
+      "sha256": "5259c9b02d52c6c83f2bd15969c04fa2aaec2eec2a349fa782c6f34f2854db24"
+    },
+    {
+      "path": "node_modules/.vite/deps/react_jsx-runtime.js 2.map",
+      "bytes": 18616,
+      "allocated": 20480,
+      "sha256": "b69ba7cf38f48de57ae38c7d7c56c9ed0bb99a3d3fd60fef6f3dbf9c4b40b5d8"
+    },
+    {
+      "path": "node_modules/.vite/deps/react_jsx-runtime 2.js",
+      "bytes": 10778,
+      "allocated": 12288,
+      "sha256": "3d4b7d05820ea1e36df1f2469bcd65a6408066c6f0156a83ede49f17efdfd55e"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-server-dom-webpack_client__browser.js",
+      "bytes": 134226,
+      "allocated": 135168,
+      "sha256": "800e9c8e1882493894d77161d5d71ccfb887b396cf13f2ba58ebd2411d273312"
+    },
+    {
+      "path": "node_modules/.vite/deps/react-server-dom-webpack_client__browser.js 2.map",
+      "bytes": 265440,
+      "allocated": 266240,
+      "sha256": "5d23fad111634b1289a2fdf6a6e74e1dee4bc8d2ce64679dcf1f33d1d7aa3275"
+    },
+    {
+      "path": "node_modules/.vite/deps/next_headers.js",
+      "bytes": 50498,
+      "allocated": 53248,
+      "sha256": "fd8acf75b97ea4fc792a385ec9e17dc48d2db82e1617402907792f9e0b1b497f"
+    },
+    {
+      "path": "node_modules/.vite/deps/_metadata 2.json",
+      "bytes": 1859,
+      "allocated": 4096,
+      "sha256": "087cda0a6a69cc06f69475b618b2509e5d738471c3b3ee84697f71ae66c5422b"
+    },
+    {
+      "path": "node_modules/.vite/deps/react 2.js",
+      "bytes": 38269,
+      "allocated": 40960,
+      "sha256": "b234f16c2bddc7aa986916f88c563710fbe38595f223ebd3fd9e18ebe8f5b2bb"
+    },
+    {
+      "path": ".vinext/dev/lock.json",
+      "bytes": 228,
+      "allocated": 4096,
+      "sha256": "7b5d08fd3a97adc03743302acf18f4471fc6ebba74a05454c45af515224e3d51"
+    },
+    {
+      "path": ".wrangler/registry/__vite_proxy_worker__",
+      "bytes": 166,
+      "allocated": 4096,
+      "sha256": "3ab30089c3f6cc7251ffffe7eb84e4490e3772c1411494b1721a47516befdf9a"
+    },
+    {
+      "path": ".wrangler/registry/__asset-worker__ 2",
+      "bytes": 156,
+      "allocated": 4096,
+      "sha256": "900908380080f7236f2a778b35def584ab23f304c95e0c9e38db24c902979003"
+    },
+    {
+      "path": ".wrangler/registry/__router-worker__",
+      "bytes": 158,
+      "allocated": 4096,
+      "sha256": "429365f7ef072f4dc9c2f4dafb4a6dc3374b98074000da2508782af58d37cd19"
+    },
+    {
+      "path": ".wrangler/registry/civilization-simulator-gui",
+      "bytes": 171,
+      "allocated": 4096,
+      "sha256": "16f034869f5c41c332f97d4aa5750470601aa556cff7916080cea14ca23472ba"
+    },
+    {
+      "path": ".wrangler/registry/__router-worker__ 2",
+      "bytes": 158,
+      "allocated": 4096,
+      "sha256": "9e426ffc1c45341e89c429d279e5fda1cabd8831ec968d60dc06302ceb25c3a7"
+    },
+    {
+      "path": ".wrangler/registry/__vite_proxy_worker__ 2",
+      "bytes": 166,
+      "allocated": 4096,
+      "sha256": "297d20e06e5cd1366229b0aa4682d8a14d2fee64003e3289df8a2c0c57e5f0b3"
+    },
+    {
+      "path": ".wrangler/registry/civilization-simulator-gui 2",
+      "bytes": 171,
+      "allocated": 4096,
+      "sha256": "a247a9cd2f91351d934dc9612ed93db44977f0b97a96359ec5913aa6239fd142"
+    },
+    {
+      "path": ".wrangler/registry/__asset-worker__",
+      "bytes": 156,
+      "allocated": 4096,
+      "sha256": "dd405814424959cd7ef22c99405412dadc0dae2392e1dc111e4d3674b363eb03"
+    }
+  ]
+}

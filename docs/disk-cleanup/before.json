@@ -1,0 +1,372 @@
+{
+  "measured_at": "2026-09-15T08:33:37.277942+09:00",
+  "du_kib": 660212,
+  "free_bytes": 115813838848,
+  "largest_files": [
+    {
+      "path": "node_modules/@cloudflare/workerd-darwin-arm64/bin/workerd",
+      "bytes": 111865464,
+      "allocated": 111865856
+    },
+    {
+      "path": "node_modules/@rolldown/binding-darwin-arm64/rolldown-binding.darwin-arm64.node",
+      "bytes": 18496544,
+      "allocated": 18497536
+    },
+    {
+      "path": "node_modules/@img/sharp-libvips-darwin-arm64/lib/libvips-cpp.8.17.3.dylib",
+      "bytes": 16076984,
+      "allocated": 16080896
+    },
+    {
+      "path": "node_modules/wrangler/wrangler-dist/cli.js",
+      "bytes": 12595865,
+      "allocated": 12599296
+    },
+    {
+      "path": "node_modules/@esbuild/darwin-arm64/bin/esbuild",
+      "bytes": 10540722,
+      "allocated": 10543104
+    },
+    {
+      "path": "node_modules/wrangler/node_modules/@esbuild/darwin-arm64/bin/esbuild",
+      "bytes": 10385170,
+      "allocated": 10387456
+    },
+    {
+      "path": "node_modules/drizzle-kit/node_modules/@esbuild/darwin-arm64/bin/esbuild",
+      "bytes": 9934834,
+      "allocated": 9936896
+    },
+    {
+      "path": "node_modules/@esbuild-kit/core-utils/node_modules/@esbuild/darwin-arm64/bin/esbuild",
+      "bytes": 9510882,
+      "allocated": 9510912
+    },
+    {
+      "path": "node_modules/typescript/lib/typescript.js",
+      "bytes": 9112572,
+      "allocated": 9113600
+    },
+    {
+      "path": "node_modules/vite/node_modules/lightningcss-darwin-arm64/lightningcss.darwin-arm64.node",
+      "bytes": 8516384,
+      "allocated": 8519680
+    },
+    {
+      "path": "node_modules/lightningcss-darwin-arm64/lightningcss.darwin-arm64.node",
+      "bytes": 8466768,
+      "allocated": 8470528
+    },
+    {
+      "path": "node_modules/miniflare/dist/src/index.js.map",
+      "bytes": 6262283,
+      "allocated": 6262784
+    },
+    {
+      "path": "node_modules/typescript/lib/_tsc.js",
+      "bytes": 6213092,
+      "allocated": 6213632
+    },
+    {
+      "path": ".git/objects/2a/0fe5bb9bd24da6e547598f7a8088215559be63",
+      "bytes": 4871234,
+      "allocated": 4874240
+    },
+    {
+      "path": "node_modules/workerd/worker.mjs",
+      "bytes": 4694072,
+      "allocated": 4698112
+    },
+    {
+      "path": ".git/objects/da/8c179280c9bed5fbb0513a87fec41bbf089b4f",
+      "bytes": 4528673,
+      "allocated": 4530176
+    },
+    {
+      "path": ".git/objects/75/b3dbbc0a4f25de2f0f27e3b9d70179d265e447",
+      "bytes": 4528663,
+      "allocated": 4530176
+    },
+    {
+      "path": ".git/objects/a2/fb693bb3a4c52aedb8c9e755e693b05a989646",
+      "bytes": 4527845,
+      "allocated": 4530176
+    },
+    {
+      "path": ".git/objects/8f/9cb231e27e4eec02ec5f27ad6f903469406433",
+      "bytes": 4527831,
+      "allocated": 4530176
+    },
+    {
+      "path": "node_modules/@cloudflare/vite-plugin/dist/index.mjs.map",
+      "bytes": 3967037,
+      "allocated": 3969024
+    },
+    {
+      "path": ".git/objects/15/0db2f4937288405b5a217fa85ce42a16e54155",
+      "bytes": 3964282,
+      "allocated": 3964928
+    },
+    {
+      "path": "node_modules/miniflare/dist/src/index.js",
+      "bytes": 3866506,
+      "allocated": 3866624
+    },
+    {
+      "path": ".git/objects/e0/5543d21e6cb4bceffcf17f9ff818e6ae6ef705",
+      "bytes": 3796860,
+      "allocated": 3796992
+    },
+    {
+      "path": "node_modules/drizzle-kit/bin.cjs",
+      "bytes": 3693410,
+      "allocated": 3694592
+    },
+    {
+      "path": ".git/objects/45/47992040e80238c77d8e56c89e03b726c51352",
+      "bytes": 3585151,
+      "allocated": 3588096
+    },
+    {
+      "path": "node_modules/wrangler/wrangler-dist/metafile-cjs.json",
+      "bytes": 3350060,
+      "allocated": 3350528
+    },
+    {
+      "path": ".git/objects/84/4b093e95c562c013059699cf0d849df1aea981",
+      "bytes": 3027878,
+      "allocated": 3031040
+    },
+    {
+      "path": ".git/objects/79/ce58421674d81391216b191a3b2074821172db",
+      "bytes": 2988627,
+      "allocated": 2990080
+    },
+    {
+      "path": "node_modules/drizzle-kit/api.js",
+      "bytes": 2956135,
+      "allocated": 2957312
+    },
+    {
+      "path": "node_modules/drizzle-kit/api.mjs",
+      "bytes": 2946338,
+      "allocated": 2949120
+    },
+    {
+      "path": "node_modules/@tailwindcss/oxide-darwin-arm64/tailwindcss-oxide.darwin-arm64.node",
+      "bytes": 2939952,
+      "allocated": 2940928
+    },
+    {
+      "path": "dist/client/og.png",
+      "bytes": 2319477,
+      "allocated": 2322432
+    },
+    {
+      "path": "public/og.png",
+      "bytes": 2319477,
+      "allocated": 2322432
+    },
+    {
+      "path": ".git/objects/ab/434fd17b6f7854c5b661c6b41ecb8966975b38",
+      "bytes": 2307702,
+      "allocated": 2310144
+    },
+    {
+      "path": "node_modules/@cloudflare/vite-plugin/dist/index.mjs",
+      "bytes": 2103658,
+      "allocated": 2105344
+    }
+  ],
+  "preservation_sha256": {
+    ".DS_Store": "f6ce1e8fab2931e0a1e3603f12b6226e5203c56081d8084b9afeafc62f20aa3a",
+    "LICENSE": "ef8d9a5cab15c2add0f0339ebb95538bf685162a5077d68bf212c53ba41d824e",
+    "postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "next-env.d.ts": "a291a6b60536fec0a3b9d4ffd6d51179b463e9bc20281d7499d756813b4c07d5",
+    "README.md": "b9f9ea633579e7afb13fb65901e6782316769d6b24a974cc639588dc6db24167",
+    ".gitignore": "ff379d2c54667ab3b5d5728664abac2e5a9de01c2d32b57bccb7e4071407ff39",
+    "package-lock.json": "bc813855135cc3780be98b184e8514369c9a0a90da52cc378acb6ef240823d10",
+    "package.json": "f91abed75a9d847a48cabc377befa5bbc91e61bd9ac6ed3d00408ffd2aded578",
+    "tsconfig.json": "379054f6cec60ebd0e18c47a3ce72b2cc1b3f7abd0037c668e87cb2070891147",
+    "drizzle.config.ts": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
+    "vite.config.ts": "f70ddcc6596e45223b8b26da90dfbd8c6bf678379f7123c20b22304e21dcd4cb",
+    "eslint.config.mjs": "2c0d3e6aec9a24ad0b1defc7ceae1192aedf4fd17a7f889f6a781a6a0c9e662c",
+    "next.config.ts": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
+    "app/chatgpt-auth.ts": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc",
+    "app/layout.tsx": "cf6e19e63932f1a3d6a4b383a2360cbb09cd536ec445d04b9a2f42b8dcd2f258",
+    "app/WorldMap.tsx": "f222da098d2de20572a72716f96fed31a128c61736004c0c653a74907605c3c8",
+    "app/page.tsx": "83e67ce32c515661b4d2395f6cb9311a9592778bb8af313b808189a0b610af3b",
+    "app/globals.css": "6f029ece2f80d507a4eca1504977baa0ab3e62a7c1f9cd203d0f6e3cb617eb01",
+    "app/simulation.ts": "0142067af66dc275fc3c5c9228d74d56343576ccc8df1ae079416401bcdef6f7",
+    "dist/.DS_Store": "d59d436192a3a790ffd1edd6f3ddcf90ee42aed6b68139188f5abccd9e51885b",
+    "dist/server/vinext-server.json": "a82deeb8becf4a35e4207c7f7cb7070bed9950caa90b9fee17c1e642e2dfc26f",
+    "dist/server/wrangler.json": "43a37a65e8e129fbc686780025ff387ba6c80f2aaaed1a9fc03b7446e5e10b2c",
+    "dist/server/vinext-externals.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "dist/server/index.js": "60aaf6da66693bb569537fea613516ce06c7753b223ad22c8200ac56bf498b68",
+    "dist/server/BUILD_ID": "c6f36db3daec14c4564560a4a31b2d92a23e15c1ad343990bfd294b8f7e9f4d4",
+    "dist/server/vinext-client-assets.js": "2c740f6f36ba0e60a7bad5c5ef669dfbd7e95647e0c86cf8173b0668195f3dc1",
+    "dist/server/__vite_rsc_assets_manifest.js": "7d12bd7e09434d0546bfecc17e71741d7960d427d9304ae551c2a0c128878f84",
+    "dist/server/_next/static/navigation-runtime-Dnpfg5UA.js": "a4395ea2039fa828ca71be1155ff8e5a8ec334a187b351670a9051cc2c7b4a0a",
+    "dist/server/_next/static/app-prerender-static-params-DDhPljJM.js": "bfa4ad6d32bc78b658c1d6c8c505aa098a1f1c3e87b2ed9147a54251cdc219cc",
+    "dist/server/_next/static/headers-BoLcH_CX.js": "f2231d9b898e713ff851c7c6f351bd912924d66fa3cd1d75589fd1625ab71d19",
+    "dist/server/_next/static/page-C3zY57eX.js": "c9ad5a31aeae28a297e0fb03ae22225dc96e81461d09a7d2b5fd0e002a232d3f",
+    "dist/server/_next/static/rolldown-runtime-DUnMT5BP.js": "5db5ba82eef00d1dee7e86e663098c9427d01183a88d357437daff295aec3e75",
+    "dist/server/_next/static/app-page-cache-BOWjy5L4.js": "84ee1000bea5b81512f55f140caf30ea0d2a5c56bb790a4d354ab9c96524ac53",
+    "dist/server/_next/static/app-page-cache-finalizer-Cb5GAT0h.js": "8d644e01548012aed0dfa5cdac5a3d5ec8fe1aec0da06c6ca578d878be70515a",
+    "dist/server/_next/static/record-CW_Fw1mA.js": "b9bdb7b7d0e4844d241dba61104d18111d61ef92af3f137d15749531d276f9cf",
+    "dist/server/_next/static/root-params-CEmdAQI0.js": "ed18c8c71a964178c57d644436409e819a1f0f1d57a072f670473042561425e8",
+    "dist/server/_next/static/instrumentation-BefDMiNC.js": "988246af7ebaf477099f96f6dc8d32819eca603bf3689b44b4e45534be5955d0",
+    "dist/server/_next/static/app-elements-BUrInmxW.js": "1d80c881de21f9b556564f9e004483c6729ee5750c4aec3700ee8b87d92fac6e",
+    "dist/server/_next/static/app-route-handler-dispatch-DvLDpl25.js": "ba0bd90589f91e0192aa462747e159ee69b0b8b19ea68266a4d2b743d82d6f2c",
+    "dist/server/_next/static/app-static-generation-LiC_hiio.js": "71451721ae4a42108e9ed32567cd9d9861beb4952215b0fd57ffc373cd3edc01",
+    "dist/server/_next/static/app-segment-config-D7ZLXjCq.js": "a19fecfdd4eb0301e2944a69a5ed80a4ffa4fac038e92f538ffb582b3f6d82e1",
+    "dist/server/_next/static/framework~index~page~app-route-handler-dispatch-DbVbrU2K.js": "4f4b51ee65c1f133eac83e16398c1cd72039b803a894075bf3897d7894984582",
+    "dist/server/_next/static/text-stream-CwHK4Xwt.js": "b093afad091c5f3bd17e22d789367d3ffdb88cc857df0cf9fae801173ac895c3",
+    "dist/server/_next/static/headers-B4uKd7st.js": "5947a60b0b2aee2180fd23a0f0a443ef6ebcbcaddbe45fe2c9debb68be50f8ba",
+    "dist/server/_next/static/framework~index~layout~page~app-page-cache-render~app-page-cache~app-route-handler-dispatch-DqvEh9pS.js": "4f686187dcd97b5d9eef7f152f93eaf0b53172f59e748a8ecf410a20b326e9f8",
+    "dist/server/_next/static/framework~index-BQ5KqATe.js": "e2792bbbdc12e35a666a1a2749096d670b6095cea6293a91acde1951b5bd43b8",
+    "dist/server/_next/static/rsc-BDjKRrrT.js": "0e1b3277c357d0bde36177631f17e122e8a8d55a1bf29076b72499ee1e61d479",
+    "dist/server/_next/static/app-page-stream-CINmXk0k.js": "662d4854c1ba4a3413331eec147060523f27b02f47ebbf497f0d39d3a3774609",
+    "dist/server/_next/static/implicit-tags-CVrDJW2G.js": "d391920a1bba78299b0548cfdb8133b8463584c6b4f96f9a75b49581174fd838",
+    "dist/server/_next/static/app-prerender-endpoints-DOJylap2.js": "5c0c3b39b20a5dc14e30da61db7306708cffc31b2ab24b9de6d95e6a1c44b9ce",
+    "dist/server/_next/static/app-page-cache-render-QMKzYBgp.js": "26097c7d429e29776e4f57ad10415d9ebbd110c86cc82750b3e93308655e2bc6",
+    "dist/server/_next/static/framework~index~layout~app-page-cache-render~app-page-cache~app-route-handler-dispatch-C7OfuMlj.js": "a12fff93b2bf8ee3e27bc53517abcefe8325b83646bf4b7aedd7465178cbd644",
+    "dist/server/_next/static/css/index.Z0ttivHN.css": "ed20a538065a3da1f7c8a1c6ff2e668d161aee4a50aef4b1cdf0c698a0e45c25",
+    "dist/server/ssr/vinext-server.json": "a82deeb8becf4a35e4207c7f7cb7070bed9950caa90b9fee17c1e642e2dfc26f",
+    "dist/server/ssr/index.js": "c70dd61807fa4625a7163aeb2b1a0c16df66014d0f8c96fbb1446391dd2216fe",
+    "dist/server/ssr/vinext-client-assets.js": "2c740f6f36ba0e60a7bad5c5ef669dfbd7e95647e0c86cf8173b0668195f3dc1",
+    "dist/server/ssr/__vite_rsc_assets_manifest.js": "7d12bd7e09434d0546bfecc17e71741d7960d427d9304ae551c2a0c128878f84",
+    "dist/server/ssr/_next/static/static.edge-CKJjMt3N.js": "9aa4706e79212b5ce4072eb3d7600afd525dc33bf2f7a66f64a94ffbc9fd7149",
+    "dist/server/ssr/_next/static/app-router-scroll-CXtfYmbm.js": "33b9ed54d0ed62ae888ff8f1c5b6edfe80c677616e1e341fe33d647181fea7d3",
+    "dist/server/ssr/_next/static/layout-segment-context-B4ytubBg.js": "2e9e01153ce4f5bfb1d2583f0949de071a5b1a4755863e538fa3562223b55696",
+    "dist/server/ssr/_next/static/app-prefetch-fetch-queue-DxuBK-0j.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dist/server/ssr/_next/static/page-DvQMGhGw.js": "41de499be4a646d569fc999d4e03b4aa097fe91824539a53dc10ec86d5619f9e",
+    "dist/server/ssr/_next/static/error-boundary-CxInkitn.js": "23f85efd0e4fdd5a706b4f36feaccb50faf4991298f3ba5590334953d7a708f9",
+    "dist/server/.vite/manifest.json": "a04fe0a14f3c62c19b1755e57db9f9f154edb211ba9f7a30ce6b4ceeeaaa6f39",
+    "dist/.openai/hosting.json": "1198e3144174b2e68a26f591d4e1375886662a17618d1d02e6c2d9802d40b5e4",
+    "dist/.openai/drizzle/meta/_journal.json": "90cb374e093894d0efce6f1830d873a42aadd8ba49d2f024495e5cb2e1c8c303",
+    "dist/client/file.svg": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307",
+    "dist/client/_headers": "2148fb62669525f5091532d36d4a48a8da95b08a5a797bacde75d2fe981351bb",
+    "dist/client/.assetsignore": "14ce8d5101f6d8f172242053466d44f5e2cd622dee81db53c14bd445c25d1942",
+    "dist/client/vinext-client-entry-manifest.json": "37576a72d0724bdb98d2f83c54969263569b94b48d13f23b798638d1529d2668",
+    "dist/client/og.png": "f1d0012cc28a8b73e1d6cee49425e66bbb250ee512eee778d9098b55d10ffba7",
+    "dist/client/globe.svg": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9",
+    "dist/client/window.svg": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66",
+    "dist/client/favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "dist/client/_next/static/d86e3715-83b5-4ba7-80c2-6c47fbf5cb90/_ssgManifest.js": "653f3e53e89b4f8548ff86c19e92bb3c6b84b6be7485a320b1e00893ed877479",
+    "dist/client/_next/static/d86e3715-83b5-4ba7-80c2-6c47fbf5cb90/_buildManifest.js": "47f02b34be6dc481257b6efce4c19e19111f37ef5c437f8ffed44f0da97fa9bb",
+    "dist/client/_next/static/css/index.Z0ttivHN.css": "ed20a538065a3da1f7c8a1c6ff2e668d161aee4a50aef4b1cdf0c698a0e45c25",
+    "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2": "58a6b173d5ca1dec92166ea3c6cb1a84a4144556d10928ac14e8e6b40e4787bd",
+    "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2": "b7a545bbb08256bd809f11cfe66d88da3e22d169ea4407737b1ef0ec1ed3d791",
+    "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2": "6129fc8571c3e0cb0a4c41f5160c974a843b055009dc4ad8858bd808e18a2d86",
+    "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2": "f689f638f29fff460a2d5749edb5d5c38d7bef0389f32032d871f23fc6ebb008",
+    "dist/client/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+    "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2": "75b3bedbebc35f347c0ae3b416aa871941555357e7b0f83767eb5987875589ed",
+    "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2": "745994b5cd950ec201b66526375f057d540847cccfc70f4f24f5f571d26d3923",
+    "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b",
+    "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2": "e27f657e38d52887baa3b6b2f812bef93dfdd356f0810e40edd4ee284cc7e9f6",
+    "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2": "d67e4a94ba498635f764ddca7d1ec4271f5642f032eb24b426764480f66f8497",
+    "dist/client/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2": "16e1d48b6dd29eb240aec5db36184eb182933c082cd43de7f35af686d58087d2",
+    "dist/client/_next/static/chunks/rolldown-runtime-C60lm6uB.js": "5db5ba82eef00d1dee7e86e663098c9427d01183a88d357437daff295aec3e75",
+    "dist/client/_next/static/chunks/layout-segment-context-CCxzgiAe.js": "b8780a610ce00719660cc6b8a45acd59bc3515394e07f8b23ca1a7067aafe0c8",
+    "dist/client/_next/static/chunks/index-CNarvMte.js": "0e365964d05898dc1ed9368657eb8a9b06dda8ad9593cd639669d2f4ffcf4c73",
+    "dist/client/_next/static/chunks/page-27X-BS4l.js": "723f108b02ab06793ae311cb237190560c52f3441a7e8c7b41b79eb8517b0edb",
+    "dist/client/_next/static/chunks/framework-BgSIrAUN.js": "a8e611453a742bf422100cc5f20f7f4139295740492196303a191d9f17033206",
+    "dist/client/wasm/civilization_simulator_engine.js": "1d5a903485e0462761579ece5385610829fb19f0ea851e380911a9a7775ba8f0",
+    "dist/client/wasm/civilization_simulator_engine_bg.wasm.d.ts": "1327f453b9e993f075d85e8fcd3f20a1e7e6a6a6af44ecd276487b772d5cbec8",
+    "dist/client/wasm/engine-loader.js": "5404f16d890fb7dc9b7e65551dd843c93d254f22e675913a23a9f6b78db09cbf",
+    "dist/client/wasm/civilization_simulator_engine.d.ts": "02e38f6ab4e2c311b475f7290e9326fcb545ed4e3391b38b3a01145da9742eec",
+    "dist/client/wasm/civilization_simulator_engine_bg.wasm": "d32780d9126765b0894471e986cdea871c312f99b2a062be154f1a1944bbc818",
+    "dist/client/.vite/manifest.json": "6b06ae5483ffe6825d1db1e487139d1912a2bc4bc03f619ba9fda263d58cb2cc",
+    ".vinext/.DS_Store": "ddeb9c5aabd6b0a79d1c10a9a94a07dd5f2f6a17782de1eac85045c1193a4b13",
+    ".vinext/dev/lock.json": "7b5d08fd3a97adc03743302acf18f4471fc6ebba74a05454c45af515224e3d51",
+    ".vinext/fonts/geist-8ac0455e797f/geist-001175b1.woff2": "58a6b173d5ca1dec92166ea3c6cb1a84a4144556d10928ac14e8e6b40e4787bd",
+    ".vinext/fonts/geist-8ac0455e797f/geist-ff2310f5.woff2": "b7a545bbb08256bd809f11cfe66d88da3e22d169ea4407737b1ef0ec1ed3d791",
+    ".vinext/fonts/geist-8ac0455e797f/geist-875ccdd4.woff2": "6129fc8571c3e0cb0a4c41f5160c974a843b055009dc4ad8858bd808e18a2d86",
+    ".vinext/fonts/geist-8ac0455e797f/geist-52306abf.woff2": "f689f638f29fff460a2d5749edb5d5c38d7bef0389f32032d871f23fc6ebb008",
+    ".vinext/fonts/geist-8ac0455e797f/geist-98bbbccb.woff2": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+    ".vinext/fonts/geist-8ac0455e797f/style.css": "3a08a0ea04048682cb28073481f5d57a329caa5682643101cfb8eecedb3b96ba",
+    ".vinext/fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2": "75b3bedbebc35f347c0ae3b416aa871941555357e7b0f83767eb5987875589ed",
+    ".vinext/fonts/geist-mono-00e989178794/geist-mono-44745446.woff2": "745994b5cd950ec201b66526375f057d540847cccfc70f4f24f5f571d26d3923",
+    ".vinext/fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b",
+    ".vinext/fonts/geist-mono-00e989178794/style.css": "05a2fb905ffabb1ad1d25c7e1463805682581259bea726e557847b0e2eba0410",
+    ".vinext/fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2": "e27f657e38d52887baa3b6b2f812bef93dfdd356f0810e40edd4ee284cc7e9f6",
+    ".vinext/fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2": "d67e4a94ba498635f764ddca7d1ec4271f5642f032eb24b426764480f66f8497",
+    ".vinext/fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2": "16e1d48b6dd29eb240aec5db36184eb182933c082cd43de7f35af686d58087d2",
+    "tests/rendered-html.test.mjs": "469f95b132f4444be7938c3d0c055bf3206273be7f28aef483883558c1b76170",
+    ".next/types/routes.d.ts": "dcbe5fe927cb4c86ffb9a8f335a196c8754d6c2bcb9797c7a961b05b7dfcb84f",
+    ".cargo/config.toml": "84fd4fa17fd967cae6006ba1b0dc430904239dec921c1441dd657387ee802d6c",
+    "public/file.svg": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307",
+    "public/og.png": "f1d0012cc28a8b73e1d6cee49425e66bbb250ee512eee778d9098b55d10ffba7",
+    "public/globe.svg": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9",
+    "public/window.svg": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66",
+    "public/favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "public/wasm/civilization_simulator_engine.js": "1d5a903485e0462761579ece5385610829fb19f0ea851e380911a9a7775ba8f0",
+    "public/wasm/civilization_simulator_engine_bg.wasm.d.ts": "1327f453b9e993f075d85e8fcd3f20a1e7e6a6a6af44ecd276487b772d5cbec8",
+    "public/wasm/engine-loader.js": "5404f16d890fb7dc9b7e65551dd843c93d254f22e675913a23a9f6b78db09cbf",
+    "public/wasm/civilization_simulator_engine.d.ts": "02e38f6ab4e2c311b475f7290e9326fcb545ed4e3391b38b3a01145da9742eec",
+    "public/wasm/civilization_simulator_engine_bg.wasm": "d32780d9126765b0894471e986cdea871c312f99b2a062be154f1a1944bbc818",
+    "examples/d1/app/api/notes/route.ts": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909",
+    "examples/d1/db/schema.ts": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454",
+    "db/schema.ts": "13ddacbf0be50e054d450a6c642b7fdc1aa943fd6b99084711e07e58b600390d",
+    "db/index.ts": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
+    ".openai/hosting.json": "1198e3144174b2e68a26f591d4e1375886662a17618d1d02e6c2d9802d40b5e4",
+    "worker/index.ts": "2ed36d7fa996e946d9d7695c5925e7760246f6bf8fa35c06f1bc515c087dc450",
+    "engine/Cargo.toml": "e3e6029d97045b1da7e1d839854f5b5bd82ab3b204a7748d461c56e63f8f6e94",
+    "engine/Cargo.lock": "fb8a771e5d907790ca289f3dbbf8e473b8baf89a6a55c1f82f1158b959d64784",
+    "engine/src/lib.rs": "e9f7ef63f8688218adfba7d32ef14d6592e845a4ca1570ab624863455c7220ca",
+    "engine/src/simulation/events.rs": "d8019dcb50f919b54539bdaa751b237b5551593eff094e7f07581f42ff331c00",
+    "engine/src/simulation/observer.rs": "4350c0c519d2f3c4a63340de1f61c4ab2a6a90ad9dd7b47a81e25260e16ffdfe",
+    "engine/src/simulation/grid.rs": "d07061d7e8091cd6d65c29144177cd55a5a65408b931d4a1875992ae8e7efe04",
+    "engine/src/simulation/world.rs": "8cf3bf5f499f1d7938b90c35d1fbb93751179743df2954d602f7cdc14ae86308",
+    "engine/src/simulation/mod.rs": "9a94aabd94e3d4b2ddfef6656a600466089d127ccb0fe4aa8132a9f172b04f57",
+    "engine/src/simulation/technology.rs": "6a946a42e0ffba9a4165776ec4c96e97392e7f561ad94522b9bdfd2537f10356",
+    "engine/src/simulation/nation.rs": "9d5ce62dd78a14374b15ab858fd2db155b26bfa63a83bbcd84160937e3ae76c8",
+    "engine/src/simulation/components.rs": "a79acc89cfbc7b72f519644a6eeaeb9fc7fdfcd0a68f04ad15fe11cf4ccd59ea",
+    "engine/src/simulation/blocs.rs": "20a77120011c37c4fb54b1c9c62367b9418d913557e43207334add9e6d62b601",
+    "engine/src/simulation/resources.rs": "8f494b860dd482fb7104db4f2547494a66678d8533f1a92ce8a8c0913950c5d3",
+    "engine/src/simulation/localization.rs": "1f07c06d8f6cf4636b3f97f019e0e1e8500a941da1ccba4545a94b1d843f3636",
+    "engine/src/simulation/systems/cosmic.rs": "9609688f13676f04c9bb8350bb8b621810592b625b78cc69e4d2b420c264f69c",
+    "engine/src/simulation/systems/movement.rs": "a13a6957416632a486978ad00faf1f6401ca17a43ac7ebeee121ebac8ded9ad4",
+    "engine/src/simulation/systems/civilization.rs": "60e0b0c9354c623e0410b818a2bb13258f7cc6f71843fa13c220458fec3296da",
+    "engine/src/simulation/systems/events.rs": "9d6d95a98079ef59189791bc11fb396b7378834dcf30f60871aa96ed32ec38b7",
+    "engine/src/simulation/systems/ideology.rs": "4d2e31b3b7bc485bf4a2a82446eea08f532badbb9e9d7d5262324c1811fefa36",
+    "engine/src/simulation/systems/security.rs": "8e2981770fd9905db90257083915d3306dca0548241a01968aa13cb251ce6055",
+    "engine/src/simulation/systems/ai.rs": "431e48343bd18294e51bcd2df9ab487eaf45f3db5e9a4943d2b8d1a516cf593f",
+    "engine/src/simulation/systems/territory.rs": "43b2155157961d3aa48ff3511692b00dee8b13b1c3bac7d6309bf370bd3cf117",
+    "engine/src/simulation/systems/missions.rs": "35dddd37fb52149350b42d62b84adb1a8d12c83ef93683e041c4ad3d146b3ccf",
+    "engine/src/simulation/systems/warfare.rs": "fe4b88d9004e46922bdeb186cac14e973af5dcaef77b1544b5eada29f2c2b841",
+    "engine/src/simulation/systems/flood.rs": "e1f8e67968e745718807a7b12acf7b3544e78a0ea4e6404269b87aef4067845f",
+    "engine/src/simulation/systems/economy.rs": "5dd537cb762f0a36c7635d3fb0e1310c167a71eef88d7edfc3d986a62ce9f912",
+    "engine/src/simulation/systems/logging.rs": "25d24a35fbbdbff289dc6ce481d4a3039cec6dd312aee11a8a0cd3127796027c",
+    "engine/src/simulation/systems/mod.rs": "02a7ea1bb91ad36a130db240291097654088bc1b1670e0be2b8bb8cb33c9abd3",
+    "engine/src/simulation/systems/technology.rs": "45f35151cd89086aac7cbb331504c850650a64ff1188035e1c85708f4585e1e5",
+    "engine/src/simulation/systems/demography.rs": "f08135ccf404e3833e30ff7b9bfda649a2769bc7a2da88e5f8791ae2975f448a",
+    "engine/src/simulation/systems/blocs.rs": "e8413b54760b772e299b965c5cd7fb85cd4f87638ab0c33af90f250bc9568cfd",
+    "engine/src/simulation/systems/climate.rs": "49a845f173c1abed4090cefd3b26be74ac42dc05f822dfa92cc1646046288edb",
+    "engine/src/simulation/systems/nuclear.rs": "b0e0d795bffe544ee12c42a726b850941653be81d5481ca396742bc061923692",
+    "engine/src/simulation/systems/warfatigue.rs": "154bc27c759f4520cd0e8c0b5565dcb5857d0d71aa05c7853de2cec0ed5295a0",
+    "engine/src/simulation/systems/victory.rs": "1ca5f0e211e25cf7170e0d7748b7cf31e813f23f3b804c740b1692dbda84ed8b",
+    "engine/src/simulation/systems/environment.rs": "c98c38f29c751486a0b8672c34f9c0c5e4e44167c106577e8a27a8d4e6d82b77",
+    "engine/src/simulation/systems/diplomacy.rs": "4e8593540ade46754ed39259e5e8e95df6d88d4d656914370765140cde0ac16a",
+    "engine/src/simulation/systems/peace.rs": "5ad9de51111b29680b38d330fe148b4d764aa98916b9248f4905696b9d0d4fb1",
+    "engine/src/simulation/systems/cycles.rs": "cf76f0747024615e3e51e059670dc8f46b0cc5f0fa8bc6cb5eb6176e4f6cfb7f",
+    "engine/src/simulation/systems/supply.rs": "b2d1d18cdccd7c14af400e671490a2d792002593bcdaae0a00feff62d68dcfb0",
+    "engine/src/simulation/systems/richness.rs": "dbd573ec3b79cfbeea118f77f6840766e7fc9b81b5d5ecd7f4fbb7c1853a1aab",
+    ".wrangler/.DS_Store": "a5db93c4859a2c410f80a605447ac6ced27cb2a6253a4b91cfb28616d297d055",
+    ".wrangler/deploy/config.json": "3bb45bee9081f928ffba85d40a8dcf66a59f80b03f5ce36ee5d35c2a0ed92e3c",
+    ".wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite-shm": "294a0f63a5283987cf2212d2fbda88ade3f9255d41c52b3ed80896cda18f07b0",
+    ".wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite": "4c34b48e33536be849e9810707c97ff2b5625bb5cbf1637dbe384cfffdda3b9d",
+    ".wrangler/state/v3/cache/miniflare-CacheObject/metadata.sqlite-wal": "bfd3a6c3120ed5c3e992890bfa663636a5372318b78f4ed629ed95bc5e07f9f4",
+    ".wrangler/registry/__vite_proxy_worker__": "3ab30089c3f6cc7251ffffe7eb84e4490e3772c1411494b1721a47516befdf9a",
+    ".wrangler/registry/__asset-worker__ 2": "900908380080f7236f2a778b35def584ab23f304c95e0c9e38db24c902979003",
+    ".wrangler/registry/__router-worker__": "429365f7ef072f4dc9c2f4dafb4a6dc3374b98074000da2508782af58d37cd19",
+    ".wrangler/registry/civilization-simulator-gui": "16f034869f5c41c332f97d4aa5750470601aa556cff7916080cea14ca23472ba",
+    ".wrangler/registry/__router-worker__ 2": "9e426ffc1c45341e89c429d279e5fda1cabd8831ec968d60dc06302ceb25c3a7",
+    ".wrangler/registry/__vite_proxy_worker__ 2": "297d20e06e5cd1366229b0aa4682d8a14d2fee64003e3289df8a2c0c57e5f0b3",
+    ".wrangler/registry/civilization-simulator-gui 2": "a247a9cd2f91351d934dc9612ed93db44977f0b97a96359ec5913aa6239fd142",
+    ".wrangler/registry/__asset-worker__": "dd405814424959cd7ef22c99405412dadc0dae2392e1dc111e4d3674b363eb03",
+    "drizzle/meta/_journal.json": "90cb374e093894d0efce6f1830d873a42aadd8ba49d2f024495e5cb2e1c8c303"
+  }
+}

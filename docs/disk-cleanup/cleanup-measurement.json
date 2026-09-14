@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-15T08:34:27.276978+09:00",
+  "before": {
+    "du_kib": 660240,
+    "free_bytes": 115809718272
+  },
+  "after": {
+    "du_kib": 644980,
+    "free_bytes": 115824451584
+  },
+  "removed_file_count": 164,
+  "removed_allocated_bytes": 15663104
+}
