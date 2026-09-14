@@ -7,11 +7,14 @@
   },
   "scripts": {
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
-    "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
-    "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "build": "python3 scripts/build_lifecycle.py web",
+    "build:release": "python3 scripts/build_lifecycle.py web --release",
+    "start": "python3 scripts/build_lifecycle.py start",
+    "test": "npm run build",
+    "test:cleanup": "python3 -B -m unittest discover -s tests -p 'test_build_lifecycle.py' -v",
+    "build:clean": "python3 scripts/build_lifecycle.py clean",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "engine:build": "cargo build --manifest-path engine/Cargo.toml --target wasm32-unknown-unknown --release && wasm-bindgen engine/target/wasm32-unknown-unknown/release/civilization_simulator_engine.wasm --out-dir public/wasm --target web",
+    "engine:build": "python3 scripts/build_lifecycle.py engine",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

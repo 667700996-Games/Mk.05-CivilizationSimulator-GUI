@@ -23,6 +23,8 @@ and entity roster.
 
 Requirements: Node.js 22.13 or newer.
 
+Build/test commands also require Python 3.9+ on macOS/Linux (or WSL).
+
 ```bash
 npm install
 npm run dev
@@ -69,3 +71,8 @@ This builds the site, checks server-rendered metadata and product content, then
 runs the compiled Rust engine and verifies ticking, timescale changes, reset,
 all five civilizations, the complete system module set, and a live world
 snapshot.
+
+Builds validate isolated output before replacing `dist`, retain two development
+packages and ten capped logs, and recover abandoned workspaces on the next run.
+See [build cleanup policy](docs/build-cleanup.md) for release preservation,
+commands, CI integration and exceptions.

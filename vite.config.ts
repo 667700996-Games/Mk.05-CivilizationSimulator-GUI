@@ -44,6 +44,10 @@ export default defineConfig(async () => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    // Isolated builds own their optimizer cache; installed dependencies stay shared.
+    cacheDir: process.env.BUILD_TEMP_DIR
+      ? `${process.env.BUILD_TEMP_DIR}/vite-cache`
+      : undefined,
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,

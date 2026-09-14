@@ -1,0 +1,27 @@
+name: Build and cleanup
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test:cleanup
+      # The wrapper validates staged output before publishing and cleans in finally.
+      - run: npm test
+      - name: Recover owned workspaces even on failure or cancellation
+        if: always()
+        run: npm run build:clean
+      # No per-run archive upload: development packages live only on this runner.
+      # Release packages/symbols require an explicit release workflow and retention.

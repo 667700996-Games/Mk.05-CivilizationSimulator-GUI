@@ -34,8 +34,12 @@ yarn-error.log*
 # vercel
 .vercel
 
-/dist/
+/dist
 /.wrangler/
 /outputs/
 /work/
 /engine/target/
+
+# Owned build workspaces, bounded logs/packages and explicitly preserved outputs
+/.build/
+__pycache__/
